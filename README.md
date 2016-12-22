@@ -1,3 +1,3 @@
 # MaPerWiki package
 
-This package is currently experimental. 
+This package is currently experimental.

@@ -1,10 +1,12 @@
----
-ebook:
-  title: My EBook
-  author: Recep Karadas
----
-## 0.0.1 - First Release
+# 0.1.3 - Drag and Drop changes
+* [changed] Drag and Drop behavior
+
+# 0.1.1 - 0.1.2 - fix
+* [fixed] CompositeDisposable exception
+
+# 0.1.0 - initial
 * [Added] Autosave
 * [Added] Wordcount
-  [Todo](ToDo.md)  
-[NewElement](NewMarkdownDoc.md)
+* [Added] Export (Pandoc)
+* [Added] Drag and Drop
+* [Added] TOC
