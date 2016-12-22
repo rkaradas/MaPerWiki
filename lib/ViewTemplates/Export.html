@@ -1,0 +1,75 @@
+
+<atom-panel  class="maperwiki-export">
+  <div class="inset-panel">
+    <div class="panel-heading">EXPORT Markdown files....</div>
+
+    <div class="panel-body padded" :style="{height:model.height+'px'}" style="overflow:auto">
+      <resizer :size.sync="model.height"
+               :extent="model.resizeHandleSize"
+               :min-Size="model.resizeMinSize"
+               side="top"
+               >
+      </resizer>
+
+
+      <div class="maperwiki-export-options">
+        <div class='block'>
+            <label>Pandoc Arguments:</label>
+            <!--
+            -->
+            <small-text-editor :text.sync="model.pandocArgs" placeholder="Pandoc args"></small-text-editor>
+        </div>
+        <div class='block'>
+          <label for="convert-from">Convert from {{model.fromFormat}}:</label>
+          <select name="pandoc-args" v-model="model.fromFormat" class="form-control">
+            <option value="markdown"><div>Markdown</div></option>
+            <option value="html">HTML</option>
+            <option value="markdown_github">Github flavored Markdown</option>
+          </select>
+        </div>
+        <div class='block'>
+          <label for="convert-to">Convert to {{model.toFormat}}:</label>
+          <select name="convert-to" v-model="model.toFormat" v-on:change="changeExtension" class="form-control">
+            <option value="markdown">Markdown</option>
+            <option value="html">HTML</option>
+            <option value="markdown_github">Github flavored Markdown</option>
+            <option value="docx">Word document</option>
+          </select>
+        </div>
+        <div class='block'>
+            <label>Save as:</label>
+            <!--
+            -->
+            <small-text-editor :text.sync="model.saveAs" placeholder="Save as..."></small-text-editor>
+        </div>
+      </div>
+
+  <!--
+  <small-text-editor v-ref:editor :text.sync="searchText"></small-text-editor>
+  ="{ handle: '.handle',ghostClass: 'sortable-ghost', onEnd:'onEnd', 'onStart':onStart,onUpdate:onUpdate,onSort:onSort,onRemove:onRemove,onFilter:onFilter,'onMove': 'onMove' }"
+  -->
+      <div class="maperwiki-export-list-container select-list">
+        <div>
+          <div class="inline-block highlight-info" style="">Define export order and/or de-/activate files to export</div>
+        </div>
+
+        <ol tabindex="-1"  class='list-group mark-active' v-sortable="{ handle: '.handle',ghostClass: 'sortable-ghost', onEnd:onEnd}">
+          <li v-for="file in model.files" v-bind:class="{ 'active': file.selected}" v-on:click="changeSelected(file,$event)">
+              <div class="handle">&#9776;</div>
+              <input type="checkbox" v-model="file.selected" style="display:none">
+              <div > {{file.path}} </div>
+          </li>
+        </ol>
+
+      </div>
+    </div>
+
+    <div class='btn-toolbar' >
+      <div class='btn-group'>
+        <button class="btn" v-on:click="testFunction" >Testbutton</button>
+        <button class="btn" v-on:click="close" >Close</button>
+        <button class='btn btn-primary selected inline-block-tight' v-on:click="export" >Export</button>
+      </div>
+    </div>
+  </div>
+</atom-panel>

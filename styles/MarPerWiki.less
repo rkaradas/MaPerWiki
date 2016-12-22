@@ -1,0 +1,275 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+@import "../resources/font-awesome";
+/*
+@import (inline) "../node_modules/keen-ui/dist/keen-ui.css";
+*/
+.maperwiki-export h3 {
+  margin: 0;
+  padding: 20px 0 5px;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+}
+.maperwiki-export-list-container,
+.maperwiki-export-options
+{
+  display:table-cell;
+  padding:3px 5px;
+}
+.maperwiki-export-options
+{
+  min-width:400px;
+}
+.maperwiki-export-options div
+{
+  display:block;
+}
+.maperwiki-export-options label
+{
+  display: block;
+}
+.maperwiki-export-actions select
+{
+  background: @button-background-color;
+  border: 1px solid @button-border-color;
+  border-radius: @component-border-radius;
+  font-family: @font-family;
+  color:@text-color;
+  font-size: 1.25em;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.maperwiki-export-options select:hover,
+.maperwiki-export-options select:focus
+{
+  background: @button-background-color-hover;
+  box-shadow:none;
+}
+.maperwiki-export .handle {
+  cursor:move;
+}
+.maperwiki-export .sortable-ghost {
+  background: @background-color-selected !important;
+  color: @text-color-highlight;
+  font-weight:bold;
+}
+
+.maperwiki-export ol {
+  margin:0;
+  padding:0;
+  border-bottom:none;
+  max-height: none !important;
+}
+.maperwiki-export ol li:first-child {
+  border-radius: 20px 20px 0 0;
+  border-top:  1px solid rgba(0,0,0,0.4);
+}
+.maperwiki-export li {
+  list-style-type: none;
+  /*background: #ccc !important;*/
+  padding: 9px;
+  border-bottom: 1px solid rgba(0,0,0,0.4);
+  border-left: 1px solid rgba(0,0,0,0.4);
+  border-right: 1px solid rgba(0,0,0,0.4);
+  cursor:pointer;
+  color: @text-color;
+  -webkit-user-select: none;
+}
+ol.list-group.mark-active li:hover {
+    background: @button-background-color-hover;
+}
+.maperwiki-export li.active{
+  background: @button-background-color-hover;
+}
+.maperwiki-export ol li:last-child {
+  border-radius: 0 0 20px 20px;
+}
+.maperwiki-export li div {
+  display: inline-block;
+}
+.maperwiki-export div.btn-toolbar {
+  background: @pane-item-background-color;
+  border-top:1px solid @pane-item-border-color;
+  padding: @component-padding;
+}
+
+@treeviewFontSize : 20px;
+@hoverColor : rgba(255,255,255,0.5);
+@activeColor : red;
+
+.treeview div{
+  display:table;
+  width: 100%;
+  overflow: hidden;
+}
+.treeview div:hover{
+  background:rgba(0,0,0,0.05);
+
+}
+.fa-icon(@name) {
+    font-family: 'FontAwesome';
+    @content: "fa-var-@{name}";
+    &:before {content: @@content}
+}
+.treeview-item-text
+{
+  cursor: pointer;
+  &:hover { text-decoration: none; color:@hoverColor; }
+  &:active { color:@activeColor; }
+}
+.treeview span {
+  font-size: @treeviewFontSize;
+  display: table-cell;
+}
+.maperwiki-toc-icon
+{
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    width: @treeviewFontSize;
+    height: @treeviewFontSize;
+    font-size: @treeviewFontSize;
+    text-decoration: none;
+    &:hover { text-decoration: none; color:@hoverColor; }
+    &:active { color:@activeColor; }
+    /*
+    */
+}
+.maperwiki-toc-expand-all
+{
+  .maperwiki-toc-icon();
+  .fa-icon(angle-double-down);
+}
+.maperwiki-toc-collapse-all
+{
+  .maperwiki-toc-icon();
+  .fa-icon(angle-double-up);
+}
+.maperwiki-toc-update-toc
+{
+  .maperwiki-toc-icon();
+  .fa-icon(refresh);
+}
+
+span.indent + span.treeview-item-text,
+.treeview li > div > :first-child[class=treeview-item-text]{
+  padding-left:30px;
+}
+.arrow-expanded{
+  .maperwiki-toc-icon();
+  .fa-icon(caret-down);
+    width: 30px;
+    text-align: center;
+    min-width:30px;
+    max-width:30px;
+}
+.arrow-collapsed{
+  .maperwiki-toc-icon;
+  .fa-icon(caret-right);
+    width: 30px;
+    text-align: center;
+    min-width: 30px;
+    max-width: 30px;
+}
+
+.maperwiki-toc-toolbar
+{
+  .maperwiki-toc-padding(10px);
+  background: rgba(0,0,0,0.3);
+  border-bottom: 2px solid #818181;
+}
+
+.treeview *{
+  /*overflow-x: hidden;*/
+}
+
+.treeview{
+  list-style: none;
+  margin: 0;
+  .maperwiki-toc-padding(0, 0);
+  display: flex;
+  flex: 3 0px;
+  overflow: auto;
+  flex-direction: column;
+  }
+.treeview ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.treeview .indent {
+    /*display: inline-block; */
+    width: 30px;
+    min-width: 30px;
+    max-width: 30px;
+}
+
+.maperwiki-toc-padding(@topBottom, @leftRight: 10px){
+  padding:@topBottom @leftRight;
+}
+.maperwiki-toc-contents{
+  white-space:nowrap;
+  display: flex;
+  flex-direction:column;
+  margin-right:5px;
+}
+.marperwiki-toc-header{
+  margin-bottom:10px;
+  font-size:14px;
+  font-weight:bold;
+  border-bottom: 2px solid #818181;
+  background: rgba( 101, 101, 101, 0.2 );
+  .maperwiki-toc-padding(9px);
+  margin: 0;
+  overflow: hidden;
+}
+
+
+.wordcount-statusbar-text{
+  padding:0 3px;
+}
+.wordcount-statusbar:hover{
+  text-decoration: underline;
+  cursor:pointer;
+}
+
+.wordcount-statistics-close{
+  float:right;
+  .fa-icon(times);
+  .fa-lg;
+  cursor:pointer;
+}
+.wordcount-statistics
+{
+   padding:10px;
+}
+.wordcount-statistics h1
+{
+    text-align:center;
+}
+.wordcount-statistics-row
+{
+  display:flex;
+}
+.flexMixin()
+{
+  width:50%;
+  padding: 3px 5px;
+}
+.wordcount-statistics-right
+{
+  .flexMixin();
+  font-weight:bold;
+}
+.wordcount-statistics-left
+{
+  .flexMixin();
+  text-align:right;
+}

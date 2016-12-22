@@ -1,0 +1,27 @@
+<div v-on:esc="close"  class="wordcount-statistics">
+  <div>
+    <span class="wordcount-statistics-close" v-on:click="close" title="(Esc)"></span>
+    <h1>Document statistics</h1>
+  </div>
+  <div class="wordcount-statistics-row">
+    <div class="wordcount-statistics-left">{{model.wordCount}} <span v-if="model.goal"> of {{model.goal}} ({{model.goalPercentage}}%) </span></div>
+      <div class="wordcount-statistics-right" >words</div>
+  </div>
+  <div class="wordcount-statistics-row">
+    <div class="wordcount-statistics-left">{{model.characterCount}}</div>
+      <div class="wordcount-statistics-right" >characters</div>
+  </div>
+  <div class="wordcount-statistics-row">
+    <div class="wordcount-statistics-left">{{model.characterCountWithoutWhitespace}}</div>
+      <div class="wordcount-statistics-right" >characters (without whitespace)</div>
+  </div>
+  <div class="wordcount-statistics-row">
+    <div class="wordcount-statistics-left">{{model.rows}}</div>
+      <div class="wordcount-statistics-right" >rows</div>
+  </div>
+  <div class="wordcount-statistics-row">
+    <div class="wordcount-statistics-left">{{model.paragraphs}}</div>
+      <div class="wordcount-statistics-right" >paragraphs</div>
+  </div>
+
+</div>

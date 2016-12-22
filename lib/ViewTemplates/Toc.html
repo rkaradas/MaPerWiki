@@ -1,0 +1,26 @@
+
+
+<div :style="{width:model.width+'px'}" class="maperwiki-toc-contents">
+
+
+  <div class="marperwiki-toc-header">Table of contents</div>
+  <div class="maperwiki-toc-toolbar">
+    <a v-on:click="expandAll" class="maperwiki-toc-expand-all" title="Expand all"></a>
+    <a v-on:click="collapseAll" class="maperwiki-toc-collapse-all" title="Collapse all"></a>
+    <a v-on:click="updateToc" class="maperwiki-toc-update-toc" title="update toc"></a>
+</div>
+  <treeview v-ref:basic-treeview
+          :model="model.treeData"
+          :root-visible="false"
+          @item-toggle="onItemToggle"
+          @item-expand="onItemExpand"
+          @item-collapse="onItemCollapse"
+          @item-click="onItemClick"></treeview>
+
+  <resizer :size.sync="model.width"
+           :extent="model.resizeHandleSize"
+           :min-Size="model.resizeMinSize"
+           side="right"
+           ></resizer>
+
+</div>

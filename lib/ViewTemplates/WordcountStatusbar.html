@@ -1,0 +1,11 @@
+<div class="wordcount-statusbar inline-block" v-on:click="openWordcountModalWindow">
+  <style v-if="model.goal">
+
+    .wordcount-statusbar-text{
+      background:-webkit-linear-gradient(left, {{model.goalProgressColor}} {{model.goalPercentage}}%, {{model.goalBackgroundColor}} 0%);
+      font-weight: {{model.goalFontWeight}};
+      color:{{model.goalFontColor}};
+    }
+  </style>
+    <div class="wordcount-statusbar-text">{{model.wordCount || 0}}W | {{model.characterCount || 0}}C</div>
+</div>

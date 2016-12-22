@@ -1,0 +1,183 @@
+{
+  "Wordcount":{
+    "title": "Wordcount Section",
+    "description": "Just the wc section ",
+    "type": "object",
+    "properties": {
+      "alwaysOn": {
+        "title": "Always on",
+        "description": "Show word count for all files, regardless of extension",
+        "type": "boolean",
+        "default": false,
+        "order": 1
+      },
+      "extensions": {
+        "title": "Autoactivated file extensions",
+        "description": "List of file extenstions which should have the wordcount plugin enabled",
+        "type": "array",
+        "default": ["md", "markdown", "readme", "txt", "rst", "adoc", "log", "msg"],
+        "items": {"type": "string"},
+        "order": 2
+      },
+      "noextension": {
+        "title": "Autoactivate for files without an extension",
+        "description": "Wordcount plugin enabled for files without a file extension",
+        "type": "boolean",
+        "default": false,
+        "items": {"type": "boolean"},
+        "order": 3
+      },
+      "Goal":{
+        "title": "Wordcount goal section",
+        "description": "Modify goal settings ",
+        "type": "object",
+        "properties": {
+          "Number": {
+            "title": "Work toward a word goal",
+            "description": "Shows a bar showing progress toward a word goal",
+            "type": "number",
+            "default": 0,
+            "minimum": 0,
+            "order": 4
+          },
+          "ProgressColor": {
+            "title": "Color for word goal progress",
+            "description": "Use a CSS color value, such as #abc, #abcdef, green, white, rgb(50, 100, 150) or rgba(25, 75, 125, .75) ",
+            "type": "color",
+            "default": "rgb(0, 200, 0)",
+            "order": 5
+          },
+          "BackgroundColor": {
+            "title": "Background color for word goal progress",
+            "description": "Use a CSS color value, such as #abc, #abcdef, green, white, rgb(50, 100, 150) or rgba(25, 75, 125, .75) ",
+            "type": "color",
+            "default": "rgb(101, 101, 101, 0.2)",
+            "order": 6
+          },
+          "FontColor": {
+            "title": "Font color for word goal progress",
+            "type": "string",
+            "type": "color",
+            "default": "rgb(86, 86, 86)",
+            "order": 7
+          },
+          "FontWeight": {
+            "title": "Percentage height of word goal line",
+            "type": "string",
+            "default": "normal",
+            "enum": ["normal","bold"],
+            "order": 8
+          }
+        }
+      },
+      "ignorecode": {
+        "title": "Ignore Markdown code blocks",
+        "description": "Do not count words inside of code blocks",
+        "type": "boolean",
+        "default": false,
+        "items": {"type": "boolean"},
+        "order": 9
+      }
+    }
+  },
+  "Autosave":{
+    "title": "Autosave Section",
+    "description": "Just the autosave section ",
+    "type": "object",
+    "properties": {
+      "autosaveOn": {
+        "title": "Enable autosave",
+        "description": "Enable or disable autosave",
+        "type": "boolean",
+        "default": true,
+        "order": 1
+      },
+      "autosaveInterval": {
+        "title": "In which interval should the documents be saved.",
+        "description": "Sets the autosave interval in seconds. Autosave is disabled, if value is 0",
+        "type": "number",
+        "default": 300,
+        "minimum": 30,
+        "order": 2
+      }
+    }
+  },
+  "TOC":{
+    "title": "Table of contents section",
+    "description": "Just the table of contents section ",
+    "type": "object",
+    "properties": {
+      "tocOn": {
+        "title": "Enable toc",
+        "description": "Enable or disable toc",
+        "type": "boolean",
+        "default": true,
+        "order": 1
+      },
+      "tocExtensions": {
+        "title": "Autoactivated file extensions",
+        "description": "Be aware, that the toc functionality only covers Markdown (atx) syntax (setext currently not supported)",
+        "type": "array",
+        "default": ["md", "markdown"],
+        "items": {"type": "string"},
+        "order": 2
+      },
+      "tocNoextension": {
+        "title": "Autoactivate for files without an extension",
+        "description": "Toc enabled for files without a file extension",
+        "type": "boolean",
+        "default": false,
+        "items": {"type": "boolean"},
+        "order": 3
+      },
+      "tocAutoNumberHeadings": {
+        "title": "Automatically number headings",
+        "description": "Automatically numbers headings, if activated",
+        "type": "boolean",
+        "default": true,
+        "items": {"type": "boolean"},
+        "order": 4
+      }
+    }
+  },
+  "DragAndDrop":{
+    "title": "Drag and drop section",
+    "description": "Just the drag and drop section ",
+    "type": "object",
+    "properties": {
+      "fromProjectToTextEditorEnabled": {
+        "title": "Drag and drop from project to file",
+        "description": "Enable or disable autosave",
+        "type": "boolean",
+        "default": true,
+        "order": 1
+      },
+      "fromProjectToTextEditorAction": {
+        "title": "Drag and drop from project to file",
+        "description": "What should happen, when you drag and drop a file from project folder into a text.",
+        "type": "string",
+        "default": "Copy to clipboard",
+        "items": {"type": "string"},
+        "enum": ["Copy to clipboard", "Copy to last cursor position"],
+        "order": 1
+      }
+
+    }
+  },
+  "AutomaticLinkUpdating":{
+    "title": "Automatic link updating section",
+    "description": "Just the automatic link updating section ",
+    "type": "object",
+    "properties": {
+      "directoryGlobPattern": {
+        "title": "Glob pattern",
+        "description": "The glob pattern",
+        "type": "array",
+        "default": ["**/*.md", "!**/node_modules/**"],
+        "items": {"type": "string"},
+        "order": 1
+      }
+
+    }
+  }
+}

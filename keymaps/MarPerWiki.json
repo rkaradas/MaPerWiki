@@ -1,0 +1,6 @@
+{
+  "atom-workspace": {
+    "ctrl-alt-o": "MaPerWiki:toggle",
+    "ctrl-alt-l": "MaPerWiki:toggleExport"
+  }
+}
