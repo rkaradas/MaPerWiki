@@ -3,8 +3,8 @@
     "atom-text-editor": [{
       "label": "MaPerWiki",
       "submenu": [
-        {"label": "Toggle MaPerWiki", "command": "MaPerWiki:toggle"},
-        {"label": "Test Button","command": "MaPerWiki:testfunction"},
+        {"label": "Toggle TOC", "command": "MaPerWiki:toggleToc"},
+        {"label": "Toggle Wiki search","command": "MaPerWiki:toggleWikiSearch"},
         {"label": "Toggle Export","command": "MaPerWiki:toggleExport"}
       ]
     }]
@@ -14,8 +14,8 @@
     "submenu": [{
       "label": "Wordcount",
       "submenu": [
-        {"label": "Toggle", "command": "MaPerWiki:toggle", "type": "checkbox"},
-        {"label": "Test Button","command": "MaPerWiki:testfunction"},
+        {"label": "Toggle TOC", "command": "MaPerWiki:toggleToc"},
+        {"label": "Toggle Wiki search","command": "MaPerWiki:toggleWikiSearch"},
         {"label": "Toggle Export","command": "MaPerWiki:toggleExport"}
       ]
     }]

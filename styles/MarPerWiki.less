@@ -4,9 +4,75 @@
 // for a full listing of what's available.
 @import "ui-variables";
 @import "../resources/font-awesome";
-/*
-@import (inline) "../node_modules/keen-ui/dist/keen-ui.css";
-*/
+
+.maperwiki-search-status
+{
+  padding: 3px;
+  min-height: @component-line-height;
+}
+.maperwiki-search-results-contents
+{
+  padding: 10px;
+}
+.maperwiki-search-results-item > div.maperwiki-search-results-item-header,
+.maperwiki-search-results-item > div.maperwiki-search-file-item,
+{
+  cursor: pointer;
+}
+
+.maperwiki-search-file-entries
+{
+  margin-left:50px;
+  cursor: pointer;
+}
+.maperwiki-search-file-item
+{
+  margin-left:20px;
+}
+
+.maperwiki-search-results-item
+{
+  white-space: nowrap;
+}
+
+.maperwiki-search-section
+{
+  display:flex;
+  flex-wrap:wrap;
+  width:100%;
+}
+.maperwiki-search-close
+{
+  position:absolute;
+  right:0;
+  cursor: pointer;
+}
+.maperwiki-search-box
+{
+  flex: 100 1 25em;
+}
+.maperwiki-search-actions-wrapper
+{
+  /*flex: 1 1 25em;*/
+}
+.maperwiki-search-actions
+{
+  padding-left:10px;
+}
+
+.maperwiki-search-actions .btn
+{
+  padding: 0.1em 2em;
+}
+.maperwiki-search-actions .btn > .icon
+{
+  width: 20px;
+  height: 16px;
+  vertical-align: middle;
+  fill: currentColor;
+  stroke: currentColor;
+}
+
 .maperwiki-export h3 {
   margin: 0;
   padding: 20px 0 5px;

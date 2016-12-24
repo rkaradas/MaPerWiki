@@ -1,3 +1,8 @@
+# 0.1.4 - Wiki search & minor changes
+* [Added] Wiki search panel
+* [Added] Wiki search results panel
+* [Changed] Menu entries and names
+
 # 0.1.3 - Drag and Drop changes
 * [changed] Drag and Drop behavior
 

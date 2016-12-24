@@ -1,0 +1,102 @@
+<div  :style="{height:model.height+'px'}" class="maperwiki-search-results-contents" style="overflow:auto">
+
+    <resizer :size.sync="model.height"
+             :extent="model.resizeHandleSize"
+             :min-Size="model.resizeMinSize"
+             side="top"
+             ></resizer>
+
+
+  <div v-for="result in model.results" class="maperwiki-search-results-item">
+    <div v-on:click="toggleResult(result)" class="maperwiki-search-results-item-header">
+      <!-- Header -->
+      <span class="icon" :class="result.showFileEntries?'icon-chevron-down' : 'icon-chevron-right'"></span>
+      <span class='inline-block highlight'>{{result.nrOfResults}} hits in {{result.nrOfFiles}} files</span>
+      <span class="inline-block">for</span>
+      <span class='inline-block highlight-info'>{{result.searchTerm}}</span>
+      <span class="inline-block" v-if="result.isRegEx || result.isCaseSensitive || result.isWholeWord">
+        <!--<span class="inline-block">[</span>-->
+        <span class="inline-block highlight-success" v-if="result.isRegEx">RegExp </span>
+        <span class="inline-block highlight-success" v-if="result.isCaseSensitive">Case sensitive </span>
+        <span class="inline-block highlight-success" v-if="result.isWholeWord"> Whole word</span>
+        <!--<span class="inline-block">]</span>-->
+      </span>
+    </div>
+
+    <!-- File Entry -->
+    <div v-for="fileEntry in result.fileEntries"  v-if="result.showFileEntries" class="maperwiki-search-file-item">
+      <div v-on:click="toggleFileEntry(fileEntry)" class="maperwiki-search-file-item-header">
+
+        <!-- File Header -->
+        <span class="icon" :class="fileEntry.showEntries?'icon-chevron-down' : 'icon-chevron-right'"></span>
+        <span class='inline-block highlight'>{{fileEntry.nrOfResults}} hits</span>
+        <span class="inline-block">in </span>
+        <span class="inline-block">{{fileEntry.filePath}}</span>
+      </div>
+      <!-- Hits -->
+      <ol tabindex="-1"  class='list-group mark-active maperwiki-search-file-entries'  v-if="fileEntry.showEntries" >
+        <!-- Hit -->
+        <li v-for="entry in fileEntry.entries" v-on:click="entryClicked(entry,$event)" class="maperwiki-search-file-entry">
+          <span class="inline-block" v-for="piece in entry.name.split(' ')">
+            {{{ piece  | highlight result.searchTerm }}}
+          </span>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+
+<!--
+.model.results[0].fileEntries[idx].entries.
+
+  <ul class='list-tree has-collapsable-children'>
+      <li class='list-nested-item'>
+          <div class='list-item'>
+              <span class='icon icon-file-directory'>A Directory</span>
+          </div>
+
+          <ul class='list-tree'>
+              <li class='list-nested-item'>
+                  <div class='list-item'>
+                      <span class='icon icon-file-directory'>Nested Directory</span>
+                  </div>
+
+                  <ul class='list-tree'>
+                      <li class='list-item'>
+                          <span class='icon icon-file-text'>File one</span>
+                      </li>
+                  </ul>
+              </li>
+
+              <li class='list-nested-item collapsed'>
+                  <div class='list-item'>
+                      <span class='icon icon-file-directory'>Collapsed Nested Directory</span>
+                  </div>
+
+                  <ul class='list-tree'>
+                      <li class='list-item'>
+                          <span class='icon icon-file-text'>File one</span>
+                      </li>
+                  </ul>
+              </li>
+
+              <li class='list-item'>
+                  <span class='icon icon-file-text'>File one</span>
+              </li>
+
+              <li class='list-item selected'>
+                  <span class='icon icon-file-text'>File three .selected!</span>
+              </li>
+          </ul>
+      </li>
+
+      <li class='list-item'>
+          <span class='icon icon-file-text'>.icon-file-text</span>
+      </li>
+
+      <li class='list-item'>
+          <span class='icon icon-file-symlink-file'>.icon-file-symlink-file</span>
+      </li>
+  </ul>
+-->
+</div>
