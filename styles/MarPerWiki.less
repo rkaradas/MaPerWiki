@@ -5,12 +5,30 @@
 @import "ui-variables";
 @import "../resources/font-awesome";
 
+.maperwiki-linkchecker-statusbar
+{
+  padding: 0 10px;
+  font-weight:bold;
+}
+.maperwiki-linkchecker-statusbar:hover
+{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .maperwiki-search-status
 {
   padding: 3px;
   min-height: @component-line-height;
 }
-.maperwiki-search-results-contents
+.panel-heading > span.loading-spinner-tiny {
+  margin-right: 15px; 
+}
+.maperwiki-panel-button
+{
+  cursor: pointer;
+}
+.maperwiki-panel-contents
 {
   padding: 10px;
 }
@@ -41,7 +59,7 @@
   flex-wrap:wrap;
   width:100%;
 }
-.maperwiki-search-close
+.maperwiki-panel-title-close
 {
   position:absolute;
   right:0;
@@ -162,9 +180,10 @@ ol.list-group.mark-active li:hover {
   padding: @component-padding;
 }
 
-@treeviewFontSize : 20px;
+@treeviewFontSize : 14px;
 @hoverColor : rgba(255,255,255,0.5);
 @activeColor : red;
+@headerSpace: 20px;
 
 .treeview div{
   display:table;
@@ -225,23 +244,23 @@ ol.list-group.mark-active li:hover {
 
 span.indent + span.treeview-item-text,
 .treeview li > div > :first-child[class=treeview-item-text]{
-  padding-left:30px;
+  padding-left:@headerSpace;
 }
 .arrow-expanded{
   .maperwiki-toc-icon();
-  .fa-icon(caret-down);
-    width: 30px;
+  .fa-icon(angle-down);
+    width: @headerSpace;
     text-align: center;
-    min-width:30px;
-    max-width:30px;
+    min-width:@headerSpace;
+    max-width:@headerSpace;
 }
 .arrow-collapsed{
   .maperwiki-toc-icon;
-  .fa-icon(caret-right);
-    width: 30px;
+  .fa-icon(angle-right);
+    width: @headerSpace;
     text-align: center;
-    min-width: 30px;
-    max-width: 30px;
+    min-width: @headerSpace;
+    max-width: @headerSpace;
 }
 
 .maperwiki-toc-toolbar
@@ -272,9 +291,9 @@ span.indent + span.treeview-item-text,
 
 .treeview .indent {
     /*display: inline-block; */
-    width: 30px;
-    min-width: 30px;
-    max-width: 30px;
+    width: @headerSpace;
+    min-width: @headerSpace;
+    max-width: @headerSpace;
 }
 
 .maperwiki-toc-padding(@topBottom, @leftRight: 10px){

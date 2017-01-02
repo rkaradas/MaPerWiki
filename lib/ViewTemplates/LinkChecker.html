@@ -1,0 +1,56 @@
+
+
+<atom-panel  class="maperwiki-linkchecker">
+    <div class="panel-heading">
+      <span class="loading loading-spinner-tiny inline-block" v-if="model.isBusy"></span>
+      <span class="icon icon-sync inline-block maperwiki-panel-button" v-on:click="checkLinks()" v-if="!model.isBusy"></span>
+      <span class="inline-block">Link Checker....</span>
+      <span class="icon icon-remove-close maperwiki-panel-title-close" v-on:click="onCloseLinkCheckerClick()" ></span>
+    </div>
+
+    <div class="panel-body padded">
+      <div  :style="{height:model.height+'px'}" class="maperwiki-panel-contents" style="overflow:auto">
+
+          <resizer :size.sync="model.height"
+                   :extent="model.resizeHandleSize"
+                   :min-Size="model.resizeMinSize"
+                   side="top"
+                   ></resizer>
+<!--
+            <h1>LINK CHECKER CONTENTS</h1>
+            <button class="btn" v-on:click="checkLinks()">Check links</button>
+-->
+
+            <div v-for="result in model.results" class="maperwiki-search-results-item" v-if="result.show">
+              <div  class="maperwiki-search-results-item-header">
+                <!-- Header -->
+                <span class='inline-block highlight'>{{result.brokenLinks.length}} broken WikiLinks</span>
+                <span class="inline-block">{{result.filePath}}</span>
+              </div>
+
+              <!-- File Entry -->
+              <div v-for="brokenLink in result.brokenLinks" class="maperwiki-search-file-item"   v-if="brokenLink.show">
+                <div class="maperwiki-search-file-item-header">
+                  <span class="icon icon-eye-watch" v-on:click="entryClicked(brokenLink,$event)" title="Show WikiLink"></span>
+                  <span v-if="!brokenLink.isImage" class="icon icon-file-add" v-on:click="createNewFile(brokenLink,$event)" title="Create new file">
+                  </span>
+                  <span class="icon icon-file-add status-ignored" title="Images not supported" v-else>
+                  </span>
+                  <span class="inline-block">{{brokenLink.link}}</span>
+                </div>
+                <!-- Hits -->
+                <!-- alternativeLinks -->
+                <ol tabindex="-1"  class='list-group mark-active maperwiki-search-file-entries'  >
+                  <li v-for="alternativeLink in brokenLink.alternativeLinks" class="maperwiki-search-file-entry">
+                    <span class="icon icon-link" v-on:click="linkTo(brokenLink, alternativeLink, result)" title="Link to"></span>
+                    <span class="inline-block" >
+                      {{alternativeLink}}
+                    </span>
+                  </li>
+                </ol>
+              </div>
+            </div>
+
+      </div>
+    </div>
+</atom-panel>

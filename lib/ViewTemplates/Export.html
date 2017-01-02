@@ -1,7 +1,9 @@
 
 <atom-panel  class="maperwiki-export">
   <div class="inset-panel">
-    <div class="panel-heading">EXPORT Markdown files....</div>
+    <div class="panel-heading">EXPORT Markdown files....
+      <span class="icon icon-remove-close maperwiki-panel-title-close" v-on:click="close()" ></span>
+    </div>
 
     <div class="panel-body padded" :style="{height:model.height+'px'}" style="overflow:auto">
       <resizer :size.sync="model.height"
@@ -15,8 +17,7 @@
       <div class="maperwiki-export-options">
         <div class='block'>
             <label>Pandoc Arguments:</label>
-            <!--
-            -->
+            <!--    -->
             <small-text-editor :text.sync="model.pandocArgs" placeholder="Pandoc args"></small-text-editor>
         </div>
         <div class='block'>
@@ -66,7 +67,7 @@
 
     <div class='btn-toolbar' >
       <div class='btn-group'>
-        <button class="btn" v-on:click="testFunction" >Testbutton</button>
+        <!--<button class="btn" v-on:click="testFunction" >Testbutton</button>-->
         <button class="btn" v-on:click="close" >Close</button>
         <button class='btn btn-primary selected inline-block-tight' v-on:click="export" >Export</button>
       </div>

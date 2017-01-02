@@ -5,27 +5,19 @@
     "type": "object",
     "properties": {
       "alwaysOn": {
-        "title": "Always on",
-        "description": "Show word count for all files, regardless of extension",
+        "title": "Enable wordcount",
+        "description": "Enable or disable wordcount",
         "type": "boolean",
         "default": false,
         "order": 1
       },
-      "extensions": {
-        "title": "Autoactivated file extensions",
-        "description": "List of file extenstions which should have the wordcount plugin enabled",
-        "type": "array",
-        "default": ["md", "markdown", "readme", "txt", "rst", "adoc", "log", "msg"],
-        "items": {"type": "string"},
-        "order": 2
-      },
-      "noextension": {
-        "title": "Autoactivate for files without an extension",
-        "description": "Wordcount plugin enabled for files without a file extension",
+      "ignorecode": {
+        "title": "Ignore Markdown code blocks",
+        "description": "Do not count words inside of code blocks",
         "type": "boolean",
         "default": false,
         "items": {"type": "boolean"},
-        "order": 3
+        "order": 9
       },
       "Goal":{
         "title": "Wordcount goal section",
@@ -69,14 +61,6 @@
             "order": 8
           }
         }
-      },
-      "ignorecode": {
-        "title": "Ignore Markdown code blocks",
-        "description": "Do not count words inside of code blocks",
-        "type": "boolean",
-        "default": false,
-        "items": {"type": "boolean"},
-        "order": 9
       }
     }
   },
@@ -94,7 +78,7 @@
       },
       "autosaveInterval": {
         "title": "In which interval should the documents be saved.",
-        "description": "Sets the autosave interval in seconds. Autosave is disabled, if value is 0",
+        "description": "Sets the autosave interval in seconds.",
         "type": "number",
         "default": 300,
         "minimum": 30,
@@ -114,22 +98,6 @@
         "default": true,
         "order": 1
       },
-      "tocExtensions": {
-        "title": "Autoactivated file extensions",
-        "description": "Be aware, that the toc functionality only covers Markdown (atx) syntax (setext currently not supported)",
-        "type": "array",
-        "default": ["md", "markdown"],
-        "items": {"type": "string"},
-        "order": 2
-      },
-      "tocNoextension": {
-        "title": "Autoactivate for files without an extension",
-        "description": "Toc enabled for files without a file extension",
-        "type": "boolean",
-        "default": false,
-        "items": {"type": "boolean"},
-        "order": 3
-      },
       "tocAutoNumberHeadings": {
         "title": "Automatically number headings",
         "description": "Automatically numbers headings, if activated",
@@ -137,6 +105,14 @@
         "default": true,
         "items": {"type": "boolean"},
         "order": 4
+      },
+      "tocPanelPosition": {
+        "title": "Toc panel position",
+        "description": "Set the position of toc panel",
+        "type": "string",
+        "default": "left",
+        "enum": ["left","right"],
+        "order": 5
       }
     }
   },
@@ -154,27 +130,11 @@
       },
       "fromProjectToTextEditorAction": {
         "title": "Drag and drop from project to file",
-        "description": "What should happen, when you drag and drop a file from project folder into a text.",
+        "description": "What should happen, when you drag and drop a file from project folder into texteditor.",
         "type": "string",
         "default": "Copy to clipboard",
         "items": {"type": "string"},
         "enum": ["Copy to clipboard", "Copy to last cursor position"],
-        "order": 1
-      }
-
-    }
-  },
-  "AutomaticLinkUpdating":{
-    "title": "Automatic link updating section",
-    "description": "Just the automatic link updating section ",
-    "type": "object",
-    "properties": {
-      "directoryGlobPattern": {
-        "title": "Glob pattern",
-        "description": "The glob pattern",
-        "type": "array",
-        "default": ["**/*.md", "!**/node_modules/**"],
-        "items": {"type": "string"},
         "order": 1
       }
 

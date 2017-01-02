@@ -1,0 +1,5 @@
+<div v-on:click="onShowLinkCheckerClick()" class="maperwiki-linkchecker-statusbar"
+v-bind:class="{'text-error' : model.nrOfBrokenLinks}" v-if="model.nrOfBrokenLinks > 0"
+>
+  {{model.nrOfBrokenLinks}} broken WikiLinks in {{model.nrOfFilesWithBrokenLinks}} files
+</div>
