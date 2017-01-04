@@ -1,18 +1,22 @@
-# 0.1.6 - Wiki Link checker & minor changes
+# 0.1.6 - Minor changes & corrected changelog
+* [Fixed] Drag and Drop (relative path separator)
+* [Fixed] WikiLink checker (path separator for alternative links)
+* [Fixed] Export (path separator)
+* [Fixed] Changelog (version sync)
+
+# 0.1.5 - Wiki search & minor changes
 * [Added] WikiLink checker
 * [Added] WikiLink checker status-bar
 * [Added] TOC switch right/left
 * [Added] Tool-bar items (toggle link checker/wiki search/export)
 * [Added] keymaps
+* [Changed] Drag and Drop (relative paths)
 * [Changed] TOC style
 * [Changed] Menu and context-menu structure
 * [Changed] Panel visibility (hide all panels, if other panel opens)
 * [Fixed] Wiki search (close action)
 * [Fixed] Wiki search (regular expression)
 * [Fixed] Drag and Drop (not project files info message)
-
-# 0.1.5 - Wiki search & minor changes
-* [Changed] Drag and Drop (relative paths)
 * [Fixed] Wiki search (no TextEditor active)
 
 # 0.1.4 - Wiki search & minor changes
