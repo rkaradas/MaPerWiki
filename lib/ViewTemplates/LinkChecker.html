@@ -20,7 +20,7 @@
             <h1>LINK CHECKER CONTENTS</h1>
             <button class="btn" v-on:click="checkLinks()">Check links</button>
 -->
-
+          <div v-if="model.results.length > 0">
             <div v-for="result in model.results" class="maperwiki-search-results-item" v-if="result.show">
               <div  class="maperwiki-search-results-item-header">
                 <!-- Header -->
@@ -32,9 +32,9 @@
               <div v-for="brokenLink in result.brokenLinks" class="maperwiki-search-file-item"   v-if="brokenLink.show">
                 <div class="maperwiki-search-file-item-header">
                   <span class="icon icon-eye-watch" v-on:click="entryClicked(brokenLink,$event)" title="Show WikiLink"></span>
-                  <span v-if="!brokenLink.isImage" class="icon icon-file-add" v-on:click="createNewFile(brokenLink,$event)" title="Create new file">
+                  <span v-if="!brokenLink.isImage && !brokenLink.isAnchor" class="icon icon-file-add" v-on:click="createNewFile(brokenLink,$event)" title="Create new file">
                   </span>
-                  <span class="icon icon-file-add status-ignored" title="Images not supported" v-else>
+                  <span class="icon icon-file-add status-ignored" title="Images and Anchors not supported" v-else>
                   </span>
                   <span class="inline-block">{{brokenLink.link}}</span>
                 </div>
@@ -50,6 +50,11 @@
                 </ol>
               </div>
             </div>
+          </div>
+          <ul class="background-message centered" style="pointer-events:none;" v-else >
+            <li>You're awesome! There's no broken WikiLink.</li>
+          </ul>
+
 
       </div>
     </div>

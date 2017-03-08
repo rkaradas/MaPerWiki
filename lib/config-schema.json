@@ -1,6 +1,6 @@
 {
   "Wordcount":{
-    "title": "Wordcount Section",
+    "title": "Wordcount section",
     "description": "Just the wc section ",
     "type": "object",
     "properties": {
@@ -34,27 +34,24 @@
           },
           "ProgressColor": {
             "title": "Color for word goal progress",
-            "description": "Use a CSS color value, such as #abc, #abcdef, green, white, rgb(50, 100, 150) or rgba(25, 75, 125, .75) ",
             "type": "color",
             "default": "rgb(0, 200, 0)",
             "order": 5
           },
           "BackgroundColor": {
             "title": "Background color for word goal progress",
-            "description": "Use a CSS color value, such as #abc, #abcdef, green, white, rgb(50, 100, 150) or rgba(25, 75, 125, .75) ",
             "type": "color",
             "default": "rgb(101, 101, 101, 0.2)",
             "order": 6
           },
           "FontColor": {
             "title": "Font color for word goal progress",
-            "type": "string",
             "type": "color",
             "default": "rgb(86, 86, 86)",
             "order": 7
           },
           "FontWeight": {
-            "title": "Percentage height of word goal line",
+            "title": "Font weight for word goal progress",
             "type": "string",
             "default": "normal",
             "enum": ["normal","bold"],
@@ -65,7 +62,7 @@
     }
   },
   "Autosave":{
-    "title": "Autosave Section",
+    "title": "Autosave section",
     "description": "Just the autosave section ",
     "type": "object",
     "properties": {
@@ -91,6 +88,13 @@
     "description": "Just the table of contents section ",
     "type": "object",
     "properties": {
+      "tocFileTypes": {
+        "title": "Filetypes",
+        "description": "Set filetypes, where toc should be enabled",
+        "type": "string",
+        "default": "md|markdown",
+        "order": 1
+      },
       "tocOn": {
         "title": "Enable toc",
         "description": "Enable or disable toc",
@@ -122,20 +126,20 @@
     "type": "object",
     "properties": {
       "fromProjectToTextEditorEnabled": {
-        "title": "Drag and drop from project to file",
-        "description": "Enable or disable autosave",
+        "title": "Enable drag and drop from project folder into texteditor",
+        "description": "Enable or disable autosave drag and drop from project folder into texteditor",
         "type": "boolean",
         "default": true,
         "order": 1
       },
       "fromProjectToTextEditorAction": {
-        "title": "Drag and drop from project to file",
+        "title": "Drag and drop action",
         "description": "What should happen, when you drag and drop a file from project folder into texteditor.",
         "type": "string",
         "default": "Copy to clipboard",
         "items": {"type": "string"},
         "enum": ["Copy to clipboard", "Copy to last cursor position"],
-        "order": 1
+        "order": 2
       }
 
     }

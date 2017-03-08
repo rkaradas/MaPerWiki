@@ -1,3 +1,13 @@
+# 0.1.7 - Export, LinkChecker and TOC improvements
+* [Added] Export formats
+* [Fixed] Export empty args
+* [Fixed] Link Checker replace, when title and link are exactly the same.
+* [Added] Link Checker support for anchor links.
+* [Added] Link Checker empty result hint
+* [Fixed] TOC icons not showing
+* [Fixed] TOC not showing, because of grammar, added configurable extension
+* [Changed] Config descriptions, ...
+
 # 0.1.6 - Minor changes & corrected changelog
 * [Fixed] Drag and Drop (relative path separator)
 * [Fixed] WikiLink checker (path separator for alternative links)

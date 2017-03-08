@@ -3,7 +3,20 @@
 // See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
 // for a full listing of what's available.
 @import "ui-variables";
-@import "../resources/font-awesome";
+//@import url("atom://MaPerWiki/resources/font-awesome");
+
+
+@font-face {
+  font-family: 'Font Awesome';
+  src: url("atom://MaPerWiki/resources/fonts/fontawesome-webfont.woff") format('woff');
+}
+/* Needed Font Awesome variables */
+@fa-var-angle-double-down: "\f103";
+@fa-var-angle-double-up: "\f102";
+@fa-var-refresh: "\f021";
+@fa-var-angle-down: "\f107";
+@fa-var-angle-right: "\f105";
+@fa-var-times: "\f00d";
 
 .maperwiki-linkchecker-statusbar
 {
@@ -22,7 +35,7 @@
   min-height: @component-line-height;
 }
 .panel-heading > span.loading-spinner-tiny {
-  margin-right: 15px; 
+  margin-right: 15px;
 }
 .maperwiki-panel-button
 {
@@ -195,14 +208,14 @@ ol.list-group.mark-active li:hover {
 
 }
 .fa-icon(@name) {
-    font-family: 'FontAwesome';
+    font-family: 'Font Awesome';
     @content: "fa-var-@{name}";
     &:before {content: @@content}
 }
 .treeview-item-text
 {
   cursor: pointer;
-  &:hover { text-decoration: none; color:@hoverColor; }
+&:hover { text-decoration: none; /*color:@hoverColor;*/ }
   &:active { color:@activeColor; }
 }
 .treeview span {
@@ -328,7 +341,7 @@ span.indent + span.treeview-item-text,
 .wordcount-statistics-close{
   float:right;
   .fa-icon(times);
-  .fa-lg;
+  //.fa-lg;
   cursor:pointer;
 }
 .wordcount-statistics

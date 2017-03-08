@@ -7,14 +7,33 @@ import MaPerWiki from '../lib/Main';
 // To run a specific `it` or `describe` block add an `f` to the front (e.g. `fit`
 // or `fdescribe`). Remove the `f` to unfocus the block.
 
-describe('MaPerWiki', () => {
+describe('Activate MaPerWiki', () => {
   let workspaceElement, activationPromise;
 
   beforeEach(() => {
-    workspaceElement = atom.views.getView(atom.workspace);
-    activationPromise = atom.packages.activatePackage('MaPerWiki');
+    //workspaceElement = atom.views.getView(atom.workspace);
+    //activationPromise = atom.packages.activatePackage('MaPerWiki');
+
+      waitsForPromise(() =>{
+        return atom.packages.activatePackage("MaPerWiki").then((result)=>{
+        });
+      });
+
+
   });
 
+  it("should have waited long enough", ()=>{
+
+    return expect(atom.packages.isPackageActive("MaPerWiki")).toBe(true);
+  });
+
+  describe("When MaPerWiki.toggleToc event is triggered", () =>{
+    it("hides and shows the Toc panel",()=>{
+
+    });
+  });
+
+  /*
   describe('when the MaPerWiki:toggle event is triggered', () => {
     it('hides and shows the modal panel', () => {
       // Before the activation event the view is not on the DOM, and no panel
@@ -70,4 +89,5 @@ describe('MaPerWiki', () => {
       });
     });
   });
+  */
 });

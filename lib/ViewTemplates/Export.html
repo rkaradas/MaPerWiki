@@ -24,7 +24,7 @@
           <label for="convert-from">Convert from {{model.fromFormat}}:</label>
           <select name="pandoc-args" v-model="model.fromFormat" class="form-control">
             <option value="markdown"><div>Markdown</div></option>
-            <option value="html">HTML</option>
+            <!--<option value="html">HTML</option>-->
             <option value="markdown_github">Github flavored Markdown</option>
           </select>
         </div>
@@ -35,6 +35,9 @@
             <option value="html">HTML</option>
             <option value="markdown_github">Github flavored Markdown</option>
             <option value="docx">Word document</option>
+            <option value="epub">Epub</option>
+            <option value="mobi">Mobi</option>
+            <option value="pdf">Pdf</option>
           </select>
         </div>
         <div class='block'>
@@ -73,4 +76,11 @@
       </div>
     </div>
   </div>
+  <ul class='background-message centered' style="background-color: rgba(0,0,0,0.5);"  v-if="model.isExportInProgress">
+      <li>
+        <span class='loading loading-spinner-large inline-block'></span>
+        <p>Export in progress...</p>
+      </li>
+  </ul>
+
 </atom-panel>
