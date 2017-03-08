@@ -1,4 +1,9 @@
-# 0.1.7 - Export, LinkChecker and TOC improvements
+# 0.1.9 Search and LinkChecker changes
+* [Added] Search default "Enter"-KeyEvent triggers FindWiki
+* [Added] LinkChecker config section (de-/activate linkchecker & interval)
+* [Fixed] Changelog (version sync)
+
+# 0.1.7 - 0.1.8 - Export, LinkChecker and TOC improvements
 * [Added] Export formats
 * [Fixed] Export empty args
 * [Fixed] Link Checker replace, when title and link are exactly the same.

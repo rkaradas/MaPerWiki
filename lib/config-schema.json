@@ -61,6 +61,28 @@
       }
     }
   },
+  "LinkChecker":{
+    "title": "Link checker section",
+    "description": "Just the link checker section ",
+    "type": "object",
+    "properties": {
+      "autocheckOn": {
+        "title": "Enable autocheck broken WikiLinks",
+        "description": "Enable or disable autocheck broken WikiLinks",
+        "type": "boolean",
+        "default": true,
+        "order": 1
+      },
+      "autocheckInterval": {
+        "title": "In which interval should the Wiki checked for broken WikiLinks.",
+        "description": "Sets the autocheck interval in seconds.",
+        "type": "number",
+        "default": 300,
+        "minimum": 90,
+        "order": 2
+      }
+    }
+  },
   "Autosave":{
     "title": "Autosave section",
     "description": "Just the autosave section ",

@@ -40,7 +40,7 @@
       </div>
       <div class="maperwiki-search-section">
         <div class="maperwiki-search-box">
-          <small-text-editor :text.sync="model.searchTerm" placeholder="Search Term" style="width: 100%;" ></small-text-editor>
+          <small-text-editor v-ref:search-element :text.sync="model.searchTerm" placeholder="Search Term" style="width: 100%;" v-on:keyup.enter="searchInWiki()" ></small-text-editor>
         </div>
 
         <div class="maperwiki-search-actions-wrapper">
