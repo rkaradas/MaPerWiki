@@ -1,3 +1,6 @@
+* [Fixed] WikiHome shouldn't be an orphaned page, because it's home :)
+* [Fixed] SearchResults fixed issue [#1](https://github.com/rkaradas/MaPerWiki/issues/1) note: [Vue array change detection](https://vuejs.org/v2/guide/list.html#Array-Change-Detection).
+
 # 0.1.11 WikiPageNavigation fix & WikiSearch improvements
 * [Fixed] Exception handling on dis-/enabling back and forward tool-bar button
 * [Changed] WikiSearch behavior: Results panel always shows after your first search, so you can get back to the results without performing another search.
