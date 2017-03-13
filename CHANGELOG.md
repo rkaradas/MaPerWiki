@@ -1,3 +1,9 @@
+# 0.1.11 WikiPageNavigation fix & WikiSearch improvements
+* [Fixed] Exception handling on dis-/enabling back and forward tool-bar button
+* [Changed] WikiSearch behavior: Results panel always shows after your first search, so you can get back to the results without performing another search.
+* [Added] WikiSearch clear results.
+* [Added] WikiSearch remove entry from history.
+
 # 0.1.10 TOC, WikiHome, WikiPageNavigation, Orphaned WikiPages checker
 * [Added] Configurable WikiHome page and toolbar button
 * [Added] WikiPageNavigation back- and forward
