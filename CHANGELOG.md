@@ -1,3 +1,10 @@
+# 0.1.10 TOC, WikiHome, WikiPageNavigation, Orphaned WikiPages checker
+* [Added] Configurable WikiHome page and toolbar button
+* [Added] WikiPageNavigation back- and forward
+* [Added] Check orphaned (not linked) WikiPages (marks orphaned files in the tree view)
+* [Added] TOC setext support
+* [Fixed] TOC jump to header (mpe sync scroll)
+
 # 0.1.9 Search and LinkChecker changes
 * [Added] Search default "Enter"-KeyEvent triggers FindWiki
 * [Added] LinkChecker config section (de-/activate linkchecker & interval)

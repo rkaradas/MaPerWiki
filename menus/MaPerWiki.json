@@ -3,15 +3,25 @@
     "atom-text-editor": [{
       "label": "MaPerWiki",
       "submenu": [
+        {"label": "Set as WikiHome","command": "MaPerWiki:setAsWikiHome"},
         {"label": "Toggle Wiki search","command": "MaPerWiki:toggleWikiSearch"},
         {"label": "Toggle Export","command": "MaPerWiki:toggleExport"},
         {"label": "Toggle Link checker","command": "MaPerWiki:toggleLinkChecker"},
+        {"label": "Check orphaned WikiPages","command": "MaPerWiki:checkOrphanedWikiPages"},
         {"label": "TOC",
           "submenu": [
             {"label": "Toggle TOC", "command": "MaPerWiki:toggleToc"},
             {"label": "Switch TOC left/right","command": "MaPerWiki:switchTocLeftRight"}
           ]
-      }]
+        },
+        {"label": "Navigation",
+          "submenu": [
+            {"label": "Go to WikiHome", "command": "MaPerWiki:goHome"},
+            {"label": "Navigate backward","command": "MaPerWiki:goBack"},
+            {"label": "Navigate forward","command": "MaPerWiki:goForward"}
+          ]
+        }
+      ]
     }]
   },
   "menu": [{
@@ -20,11 +30,20 @@
       {"label": "Toggle Wiki search","command": "MaPerWiki:toggleWikiSearch"},
       {"label": "Toggle Export","command": "MaPerWiki:toggleExport"},
       {"label": "Toggle Link checker","command": "MaPerWiki:toggleLinkChecker"},
+      {"label": "Check orphaned WikiPages","command": "MaPerWiki:checkOrphanedWikiPages"},
       {"label": "TOC",
         "submenu": [
           {"label": "Toggle TOC", "command": "MaPerWiki:toggleToc"},
           {"label": "Switch TOC left/right","command": "MaPerWiki:switchTocLeftRight"}
         ]
-    }]
+      },
+      {"label": "Navigation",
+        "submenu": [
+          {"label": "Go to WikiHome", "command": "MaPerWiki:goHome"},
+          {"label": "Navigate backward","command": "MaPerWiki:goBack"},
+          {"label": "Navigate forward","command": "MaPerWiki:goForward"}
+        ]
+      }
+    ]
   }]
 }

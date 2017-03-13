@@ -1,4 +1,18 @@
 {
+  "WikiHome":{
+    "title": "Wiki section",
+    "description": "Just the wiki section ",
+    "type": "object",
+    "properties": {
+      "filePath": {
+        "title": "WikiHome filepath",
+        "description": "Set the WikiHome filepath",
+        "type": "string",
+        "default": "index.md",
+        "order": 1
+      }
+    }
+  },
   "Wordcount":{
     "title": "Wordcount section",
     "description": "Just the wc section ",
