@@ -17,6 +17,7 @@
     <div class="maperwiki-search-results-item-header">
       <!-- Header -->
       <span class="icon" :class="result.showFileEntries?'icon-chevron-down' : 'icon-chevron-right'" v-on:click="toggleResult(result)"></span>
+
       <span v-on:click="removeEntry(result)" class='icon icon-x' style="color:red" title="Remove from history"></span>
 
       <span class='inline-block highlight'>{{result.nrOfResults}} hits in {{result.nrOfFiles}} files</span>

@@ -1,3 +1,7 @@
+# 0.1.13 OrphanedWikiPages
+* [Fixed] OrphanedWikiPages showing all files as orphaned
+* [Fixed] SearchResults fixed issue [#1](https://github.com/rkaradas/MaPerWiki/issues/1)
+
 # 0.1.12 SearchResults fix & OrphanedWikiPages/WikiHome
 * [Fixed] WikiHome shouldn't be an orphaned page, because it's home :)
 * [Fixed] SearchResults fixed issue [#1](https://github.com/rkaradas/MaPerWiki/issues/1) note: [Vue array change detection](https://vuejs.org/v2/guide/list.html#Array-Change-Detection).
