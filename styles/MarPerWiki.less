@@ -22,6 +22,28 @@
 @fa-var-angle-right: "\f105";
 @fa-var-times: "\f00d";
 
+ul[dnd-list], ul[dnd-list] > li {
+    position: relative;
+}
+.maperwiki-required
+{
+  border-color: red;
+  background: mistyrose;
+}
+atom-workspace.maximize-preview {
+  atom-pane-container {
+    position:relative;
+    atom-pane.mpe  {
+      position:absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 100;
+    }
+  }
+}
+
 .maperwiki-linkchecker-statusbar
 {
   padding: 0 10px;
@@ -108,25 +130,25 @@
   stroke: currentColor;
 }
 
-.maperwiki-export h3 {
-  margin: 0;
-  padding: 20px 0 5px;
-  border-bottom: 1px solid black;
-  margin-bottom: 20px;
-}
 .maperwiki-export-list-container,
 .maperwiki-export-options
 {
   display:table-cell;
   padding:3px 5px;
 }
+
+.maperwiki-export-group
+{
+  display:flex;
+  align-items: stretch;
+}
+
 .maperwiki-export-options
 {
   min-width:400px;
 }
 .maperwiki-export-options div
 {
-  display:block;
 }
 .maperwiki-export-options label
 {
@@ -149,6 +171,123 @@
   background: @button-background-color-hover;
   box-shadow:none;
 }
+/* EXPORT drag and drop section */
+
+.maperwiki-dndList .epanel
+{
+  margin: 5px;
+  border: 1px solid silver;
+  border-radius: 5px;
+}
+.maperwiki-dndList .epanel .panel-heading {
+    background: @button-background-color-hover;
+    color:@text-color;
+}
+.maperwiki-dndList .epanel .panel-heading h3 {
+    margin: 0;
+}
+
+/**
+ * For the correct positioning of the placeholder element, the dnd-list and
+ * it's children must have position: relative
+ */
+.maperwiki-dndList ul[dnd-list],
+.maperwiki-dndList ul[dnd-list] > li{
+  position: relative;
+  min-height: 20px;
+}
+/**
+ * The dnd-list should always have a min-height,
+ * otherwise you can't drop to it once it's empty
+ */
+.maperwiki-dndList ul[dnd-list] {
+    padding-left: 0px;
+}
+/**
+ * The dndDraggingSource class will be applied to
+ * the source element of a drag operation. It makes
+ * sense to hide it to give the user the feeling
+ * that he's actually moving it.
+ */
+.maperwiki-dndList ul[dnd-list] .dndDragging{
+    opacity: 0.7;
+}
+.maperwiki-dndList ul[dnd-list] .dndDraggingSource{
+    display: none;
+}
+/**
+ * An element with .dndPlaceholder class will be
+ * added to the dnd-list while the user is dragging
+ * over it.
+ */
+.maperwiki-dndList ul[dnd-list] .dndPlaceholder {
+    display: block;
+    background-color: #eee;
+    min-height: 20px;
+}
+/**
+ * The dnd-lists's child elements currently MUST have
+ * position: relative. Otherwise we can not determine
+ * whether the mouse pointer is in the upper or lower
+ * half of the element we are dragging over. In other
+ * browsers we can use event.offsetY for this.
+ */
+.maperwiki-dndList ul[dnd-list] li {
+    background-color: #fff;
+    color: #35495E;
+    border-bottom: 1px solid silver;
+    display: block;
+    padding: 0 15px;
+    line-height: 20px;
+    p{
+      margin: 0;
+    }
+}
+.maperwiki-dndList ul[dnd-list] li:last-child{
+    border-bottom: none;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+/**
+ * Show selected elements in green
+ */
+.maperwiki-dndList ul[dnd-list] .selected {
+    /*background-color: gray;*/
+
+}
+.maperwiki-dndList ul[dnd-list] .selected.has-container {
+  background-color: #fff;
+  .panel-body, .panel-body li{
+    /*background-color: #dff0d8*/;
+    color: #3c763d;
+  }
+}
+/*new-elements*/
+.new-elements .dnd-button{
+    border: 1px solid #41B883;
+    text-align: center;
+    height: 40px;
+    border-radius: 4px;
+    line-height: 40px;
+    background-color: #41B883;
+    color: #fff;
+    cursor: move;
+}
+.disable-element .dnd-button{
+    background-color: #E32822;
+    border: 1px solid #E32822;
+    cursor: pointer;
+}
+.selected{
+}
+.ashcan{
+  .ashcan-logo{
+    display: block;
+    width: 40px;
+    margin: 10px auto;
+  }
+}
+/*
 .maperwiki-export .handle {
   cursor:move;
 }
@@ -170,7 +309,7 @@
 }
 .maperwiki-export li {
   list-style-type: none;
-  /*background: #ccc !important;*/
+  background: #ccc !important;
   padding: 9px;
   border-bottom: 1px solid rgba(0,0,0,0.4);
   border-left: 1px solid rgba(0,0,0,0.4);
@@ -191,6 +330,7 @@ ol.list-group.mark-active li:hover {
 .maperwiki-export li div {
   display: inline-block;
 }
+*/
 .maperwiki-export div.btn-toolbar {
   background: @pane-item-background-color;
   border-top:1px solid @pane-item-border-color;

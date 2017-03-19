@@ -13,6 +13,15 @@
                >
       </resizer>
 
+      <!--
+            <ol tabindex="-1"  class='list-group mark-active' v-sortable="{ handle: '.handle',ghostClass: 'sortable-ghost', onEnd:onEnd}">
+              <li v-for="file in model.files" v-bind:class="{ 'active': file.selected}" v-on:click="changeSelected(file,$event)">
+                  <div class="handle">&#9776;</div>
+                  <input type="checkbox" v-model="file.selected" style="display:none">
+                  <div > {{file.path}} </div>
+              </li>
+            </ol>
+          -->
 
       <div class="maperwiki-export-options">
         <div class='block'>
@@ -29,16 +38,21 @@
           </select>
         </div>
         <div class='block'>
-          <label for="convert-to">Convert to {{model.toFormat}}:</label>
-          <select name="convert-to" v-model="model.toFormat" v-on:change="changeExtension" class="form-control">
-            <option value="markdown">Markdown</option>
-            <option value="html">HTML</option>
-            <option value="markdown_github">Github flavored Markdown</option>
-            <option value="docx">Word document</option>
-            <option value="epub">Epub</option>
-            <option value="mobi">Mobi</option>
-            <option value="pdf">Pdf</option>
-          </select>
+          <label for="convert-to" >Convert to {{model.toFormat}}:</label>
+          <div class="maperwiki-export-group">
+            <select name="convert-to" v-model="model.toFormat" v-on:change="changeExtension" class="form-control" required="">
+              <option value="markdown">Markdown</option>
+              <option value="html">HTML</option>
+              <option value="markdown_github">Github flavored Markdown</option>
+              <option value="docx">Word document</option>
+              <option value="epub">Epub</option>
+              <option value="mobi">Mobi</option>
+              <option value="pdf">Pdf</option>
+              <option v-for="customUserExport in model.customUserExports" v-bind:value="customUserExport.exportName">
+                {{customUserExport.exportName}} = {{customUserExport.exportValue}}
+            </select>
+            <button class="btn icon icon-gear" v-on:click="toggleExportConfig" >customize</button>
+          </div>
         </div>
         <div class='block'>
             <label>Save as:</label>
@@ -52,25 +66,35 @@
   <small-text-editor v-ref:editor :text.sync="searchText"></small-text-editor>
   ="{ handle: '.handle',ghostClass: 'sortable-ghost', onEnd:'onEnd', 'onStart':onStart,onUpdate:onUpdate,onSort:onSort,onRemove:onRemove,onFilter:onFilter,'onMove': 'onMove' }"
   -->
-      <div class="maperwiki-export-list-container select-list">
+
+      <div class="maperwiki-export-list-container select-list maperwiki-dndList">
         <div>
           <div class="inline-block highlight-info" style="">Define export order and/or de-/activate files to export</div>
         </div>
 
-        <ol tabindex="-1"  class='list-group mark-active' v-sortable="{ handle: '.handle',ghostClass: 'sortable-ghost', onEnd:onEnd}">
-          <li v-for="file in model.files" v-bind:class="{ 'active': file.selected}" v-on:click="changeSelected(file,$event)">
-              <div class="handle">&#9776;</div>
-              <input type="checkbox" v-model="file.selected" style="display:none">
-              <div > {{file.path}} </div>
-          </li>
-        </ol>
-
+        <div v-for="(zone, list) in model.files" class="col-md-5 maperwiki-export-list-container">
+          <div class="epanel panel-vue ">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{zone}}</h3>
+            </div>
+            <ul class="panel-body container-list"
+             tabindex="-1"
+                v-dnd-list
+                :dnd-list="list"
+                dnd-inserted="inserted"
+                dnd-effect-allowed="move"
+                :dnd-disable-if="disable"
+                :dnd-external-sources="true">
+              <list v-for="item in list" :item="item" :list="list" :index="$index" :selected.sync="selected" :disable.sync="disable"></list>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-
     <div class='btn-toolbar' >
       <div class='btn-group'>
-        <!--<button class="btn" v-on:click="testFunction" >Testbutton</button>-->
+        <!--<button class="btn" v-on:click="testfkt" >testbtn</button>-->
+        <button class="btn" v-on:click="readExportfiles" >(Re)load Exportfiles</button>
         <button class="btn" v-on:click="close" >Close</button>
         <button class='btn btn-primary selected inline-block-tight' v-on:click="export" >Export</button>
       </div>
@@ -81,6 +105,37 @@
         <span class='loading loading-spinner-large inline-block'></span>
         <p>Export in progress...</p>
       </li>
+  </ul>
+
+  <ul class='background-message centered'
+    v-if="model.showExportConfig"
+    style="background-color: rgba(0,0,0,0.5);font-size:inherit" >
+    <li>
+      <atom-panel class='modal'>
+        <div "panel-heading">
+          Custom export params
+          <span class="icon icon-remove-close maperwiki-panel-title-close" v-on:click="toggleExportConfig" ></span>
+        </div>
+        <div :style="{maxHeight:model.height+'px', minHeight:model.resizeMinSize+'px'}" style="overflow:auto;padding:5px;" >
+
+          <div v-for="customUserExport in model.customUserExports"  class="maperwiki-export-group" style="margin:2px 0">
+            <input class="native-key-bindings form-control" type="text" v-model="customUserExport.exportName" placeholder="Export name"/>
+            <input class="native-key-bindings form-control" type="text" v-model="customUserExport.exportValue" placeholder="Export value"/>
+            <input class="native-key-bindings form-control" type="text" v-model="customUserExport.exportExtension" placeholder="Export extension, e.g. txt"/>
+            <button class="btn icon icon-remove-close btn-error btn-group-xs" v-on:click="removeCustomUserExport(customUserExport)" ></button>
+
+          </div>
+        </div>
+        <div class="maperwiki-export-config-actions">
+
+          <div class='btn-group'>
+            <button class="btn" v-on:click="addNewCustomUserExport" >Add new</button>
+            <button class="btn" v-on:click="toggleExportConfig" >Cancel</button>
+            <button class="btn" v-on:click="saveCustomUserExports" >Save</button>
+          </div>
+        </div>
+      </atom-panel>
+    </li>
   </ul>
 
 </atom-panel>

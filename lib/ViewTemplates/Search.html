@@ -29,7 +29,11 @@
           </symbol>
         </svg>
 
-    <div class="panel-heading">Search Wiki....
+    <div class="panel-heading">
+
+      <span class="loading loading-spinner-tiny inline-block" v-if="model.isBusy"></span>
+      <span class="icon icon-search inline-block" v-if="!model.isBusy"></span>
+      <span class="inline-block">Search Wiki....</span>
       <span class="icon icon-remove-close maperwiki-panel-title-close" v-on:click="closeSearch()" ></span>
     </div>
 
@@ -45,17 +49,17 @@
 
         <div class="maperwiki-search-actions-wrapper">
           <div class='maperwiki-search-actions' >
-            <button class='btn' v-on:click="search()">Find</button>
-            <button class='btn' v-on:click="searchInWiki()">Find in Wiki</button>
+            <button class='btn' v-on:click="search()" :disabled="model.isBusy">Find</button>
+            <button class='btn' v-on:click="searchInWiki()" :disabled="model.isBusy">Find in Wiki</button>
             <div class="btn-group btn-toggle btn-group-options">
 
-              <button v-on:click="setIsRegEx()" class='btn' v-bind:class="{ 'selected': model.isRegEx}">
+              <button v-on:click="setIsRegEx()" class='btn' v-bind:class="{ 'selected': model.isRegEx}" :disabled="model.isBusy">
                 <svg class="icon"><use xlink:href="#find-and-replace-icon-regex" /></svg>
               </button>
-              <button v-on:click="setIsCaseSensitive()" class='btn' v-bind:class="{ 'selected': model.isCaseSensitive}">
+              <button v-on:click="setIsCaseSensitive()" class='btn' v-bind:class="{ 'selected': model.isCaseSensitive}" :disabled="model.isBusy">
                 <svg class="icon"><use xlink:href="#find-and-replace-icon-case" /></svg>
               </button>
-              <button v-on:click="setIsWholeWord()" class='btn' v-bind:class="{ 'selected': model.isWholeWord}">
+              <button v-on:click="setIsWholeWord()" class='btn' v-bind:class="{ 'selected': model.isWholeWord}" :disabled="model.isBusy">
                 <svg class="icon"><use xlink:href="#find-and-replace-icon-word" /></svg>
               </button>
             </div>

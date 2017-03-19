@@ -1,6 +1,38 @@
 {
+  "Export":{
+    "title": "Export section",
+    "description": "Just the export section ",
+    "type": "object",
+    "properties": {
+      "customUserExports": {
+        "title": "Custom user exports",
+        "description": "Set custom user exports",
+        "type": "array",
+        "default": [{"exportName" : "", "exportValue" : "", "exportExtension": ""}],
+        "items":
+        {
+          "type": "object",
+          "properties":{
+            "exportName" : {
+              "type": "string",
+              "default": ""
+            },
+            "exportValue": {
+              "type": "string",
+              "default": ""
+            },
+            "exportExtension": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        },
+        "order": 1
+      }
+    }
+  },
   "WikiHome":{
-    "title": "Wiki section",
+    "title": "Wiki Home section",
     "description": "Just the wiki section ",
     "type": "object",
     "properties": {

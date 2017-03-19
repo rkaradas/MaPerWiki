@@ -1,3 +1,13 @@
+# 0.1.14 Maximize Preview, Export, WikiSearch, CustomUserExport
+* [Added] Maximize markdown preview enhanced
+* [Changed] Export: added drag and drop from export files to export Selection
+* [Added] WikiSearch: Toggle WikiSearch with selection -> populate searchTerm with selection.
+* [Added] WikiSearch: IsBusy indicator and disabling buttons if IsBusy.
+* [Added] Export: Custom export params settings page (atom does not show the config in the package settings of the array of objects defined in config-schema.json)
+* [Added] Export: Custom export params with param %1=inputfile (selected input md files) and %2=outputfile (save as).
+* [Added] CustomUserExport: processes the given custom export command.
+* [Added] Exception handling for Pandoc, Calibre and CustomUserExport
+
 # 0.1.13 OrphanedWikiPages
 * [Fixed] OrphanedWikiPages showing all files as orphaned
 * [Fixed] SearchResults fixed issue [#1](https://github.com/rkaradas/MaPerWiki/issues/1)

@@ -8,6 +8,7 @@
         {"label": "Toggle Export","command": "MaPerWiki:toggleExport"},
         {"label": "Toggle Link checker","command": "MaPerWiki:toggleLinkChecker"},
         {"label": "Check orphaned WikiPages","command": "MaPerWiki:checkOrphanedWikiPages"},
+        {"label": "Toggle maximize preview","command": "MaPerWiki:maximizePreview"},
         {"label": "TOC",
           "submenu": [
             {"label": "Toggle TOC", "command": "MaPerWiki:toggleToc"},
@@ -16,7 +17,7 @@
         },
         {"label": "Navigation",
           "submenu": [
-            {"label": "Go to WikiHome", "command": "MaPerWiki:goHome"},
+            {"label": "Go to WikiHome", "command": "MaPerWiki:goToWikiHome"},
             {"label": "Navigate backward","command": "MaPerWiki:goBack"},
             {"label": "Navigate forward","command": "MaPerWiki:goForward"}
           ]
@@ -31,6 +32,7 @@
       {"label": "Toggle Export","command": "MaPerWiki:toggleExport"},
       {"label": "Toggle Link checker","command": "MaPerWiki:toggleLinkChecker"},
       {"label": "Check orphaned WikiPages","command": "MaPerWiki:checkOrphanedWikiPages"},
+      {"label": "Toggle maximize preview","command": "MaPerWiki:maximizePreview"},
       {"label": "TOC",
         "submenu": [
           {"label": "Toggle TOC", "command": "MaPerWiki:toggleToc"},
@@ -39,7 +41,7 @@
       },
       {"label": "Navigation",
         "submenu": [
-          {"label": "Go to WikiHome", "command": "MaPerWiki:goHome"},
+          {"label": "Go to WikiHome", "command": "MaPerWiki:goToWikiHome"},
           {"label": "Navigate backward","command": "MaPerWiki:goBack"},
           {"label": "Navigate forward","command": "MaPerWiki:goForward"}
         ]
