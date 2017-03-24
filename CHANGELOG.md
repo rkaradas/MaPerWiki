@@ -1,3 +1,6 @@
+# 0.1.15 CustomUserExport fix
+* [fixed] Fixed multiple param replacement.
+
 # 0.1.14 Maximize Preview, Export, WikiSearch, CustomUserExport
 * [Added] Maximize markdown preview enhanced
 * [Changed] Export: added drag and drop from export files to export Selection
