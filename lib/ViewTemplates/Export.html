@@ -48,7 +48,7 @@
               <option value="epub">Epub</option>
               <option value="mobi">Mobi</option>
               <option value="pdf">Pdf</option>
-              <option v-for="customUserExport in model.customUserExports" v-bind:value="customUserExport.exportName">
+              <option v-for="customUserExport in model.customUserExports" v-bind:value="customUserExport.exportName" v-model="customUserExport">
                 {{customUserExport.exportName}} = {{customUserExport.exportValue}}
             </select>
             <button class="btn icon icon-gear" v-on:click="toggleExportConfig" >customize</button>
@@ -67,18 +67,25 @@
   ="{ handle: '.handle',ghostClass: 'sortable-ghost', onEnd:'onEnd', 'onStart':onStart,onUpdate:onUpdate,onSort:onSort,onRemove:onRemove,onFilter:onFilter,'onMove': 'onMove' }"
   -->
 
-      <div class="maperwiki-export-list-container select-list maperwiki-dndList">
-        <div>
-          <div class="inline-block highlight-info" style="">Define export order and/or de-/activate files to export</div>
-        </div>
+      <div class="maperwiki-export-list-container select-list">
 
-        <div v-for="(zone, list) in model.files" class="col-md-5 maperwiki-export-list-container">
-          <div class="epanel panel-vue ">
+        <ul v-for="(zone, list) in model.files" class="list-tree has-collapsable-children"  @dragover.prevent @drop="droppedOnDropzone">
+          <li class="list-nested-item">
             <div class="panel-heading">
-                <h3 class="panel-title">{{zone}}</h3>
+                <h3 class="panel-title">
+                  <span v-dnd-list  :dnd-list="[]" class="panel-body mpw-trashcan">
+                    <span class="icon icon-trashcan" />
+                  </span>
+                  {{zone}}
+
+                </h3>
             </div>
-            <ul class="panel-body container-list"
-             tabindex="-1"
+            <div class="highlight-info" v-if="list.length == 0">
+                Please drag files/folders from project folder and drop them here
+            </div>
+            <ul class="list-tree"
+                v-else
+                tabindex="-1"
                 v-dnd-list
                 :dnd-list="list"
                 dnd-inserted="inserted"
@@ -87,14 +94,16 @@
                 :dnd-external-sources="true">
               <list v-for="item in list" :item="item" :list="list" :index="$index" :selected.sync="selected" :disable.sync="disable"></list>
             </ul>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
+
     </div>
     <div class='btn-toolbar' >
       <div class='btn-group'>
-        <!--<button class="btn" v-on:click="testfkt" >testbtn</button>-->
+        <!--<button class="btn" v-on:click="testfkt" >testbtn</button>
         <button class="btn" v-on:click="readExportfiles" >(Re)load Exportfiles</button>
+        -->
         <button class="btn" v-on:click="close" >Close</button>
         <button class='btn btn-primary selected inline-block-tight' v-on:click="export" >Export</button>
       </div>
