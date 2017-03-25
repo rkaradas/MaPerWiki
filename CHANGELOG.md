@@ -1,8 +1,9 @@
-# 0.1.16 CustomUserExport, WikiNavigation
-* [Changed] CustomUserExport: Drag and drop from project folder (tree view) into exportlist
-* [Changed] CustomUserExport: Design looks now like the atom tree-view
-* [Added] CustomUserExport: Trashcan to delete added entries.
-* [fixed] CustomUserExport: Not adding empty folders (without md files)
+# 0.1.16 Export, CustomUserExport, WikiNavigation
+* [Changed] Export: Drag and drop from project folder (tree view) into exportlist
+* [Changed] Export: Design looks now like the atom tree-view
+* [Added] Export: Trashcan to delete added entries.
+* [fixed] Export: Not adding empty folders (without md files)
+* [fixed] CustomUserExport: Fixed always selecting first entry.
 * [Changed] WikiNavigation: Not setting initialColumn/-row to 0
 
 # 0.1.15 CustomUserExport fix
