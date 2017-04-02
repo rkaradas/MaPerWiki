@@ -1,9 +1,15 @@
 {
   "atom-workspace": {
-    "ctrl-alt-o": "MaPerWiki:toggleToc",
-    "ctrl-alt-l": "MaPerWiki:toggleExport",
-    "ctrl-alt-n": "MaPerWiki:toggleWikiSearch",
-    "ctrl-alt-b": "MaPerWiki:toggleLinkChecker",
-    "ctrl-alt-u": "MaPerWiki:switchTocLeftRight"
+    "ctrl-alt-h": "MaPerWiki:toggleToc",
+    "ctrl-alt-e": "MaPerWiki:toggleExport",
+    "ctrl-alt-u": "MaPerWiki:switchTocLeftRight",
+    "ctrl-alt-l": "MaPerWiki:toggleLinkChecker",
+    "ctrl-alt-s": "MaPerWiki:toggleWikiSearch",
+    "ctrl-alt-o": "MaPerWiki:checkOrphanedWikiPages",
+    "ctrl-alt-m": "MaPerWiki:maximizePreview",
+    "ctrl-shift-alt-left": "MaPerWiki:goBack",
+    "ctrl-shift-alt-right": "MaPerWiki:goForward",
+    "ctrl-shift-alt-home": "MaPerWiki:goToWikiHome",
+    "ctrl-shift-alt-h": "MaPerWiki:setAsWikiHome"
   }
 }

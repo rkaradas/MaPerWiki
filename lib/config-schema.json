@@ -211,5 +211,20 @@
       }
 
     }
+  },
+  "WikiSearch":{
+    "title": "WikiSearch section",
+    "description": "Just the WikiSearch section ",
+    "type": "object",
+    "properties": {
+      "followSymLinks": {
+        "title": "Enable follow symbolic links.",
+        "description": "Enable or disable follow symbolic links",
+        "type": "boolean",
+        "default": true,
+        "order": 1
+      }
+
+    }
   }
 }

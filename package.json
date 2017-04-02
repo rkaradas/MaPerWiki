@@ -17,7 +17,8 @@
     "glob": "^7.1.0",
     "chokidar": "^1.6.0",
     "uslug": "^1.0.4",
-    "vue-drag-and-drop-list": "^1.0.0"
+    "vue-drag-and-drop-list": "^1.0.0",
+    "concat": "^3.0.0"
   },
   "consumedServices": {
     "status-bar": {

@@ -24,11 +24,13 @@
           -->
 
       <div class="maperwiki-export-options">
+        <!--
         <div class='block'>
             <label>Pandoc Arguments:</label>
-            <!--    -->
             <small-text-editor :text.sync="model.pandocArgs" placeholder="Pandoc args"></small-text-editor>
+
         </div>
+          -->
         <div class='block'>
           <label for="convert-from">Convert from {{model.fromFormat}}:</label>
           <select name="pandoc-args" v-model="model.fromFormat" class="form-control">

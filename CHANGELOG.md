@@ -1,3 +1,14 @@
+# 0.1.17 Export, WikiSearch, Keymaps
+* [Changed] Export: Removed pandoc args
+* [Changed] Export: Temp file generating method
+* [Changed] WikiSearch: Live update for each file instead of update when done
+* [Changed] WikiSearch: focus textbox on show panel
+* [Added] WikiSearch: Configurable include symbolic links
+* [Added] WikiSearch: Sort entries by path
+* [Added] Keymaps for WikiNavigation, expand MPE, etc.
+* [Added] CalibreHelper --input-encoding utf8
+* [fixed] Prevent closing tool-bar when positioned at bottom, not full width and opening WikiSearch etc.
+
 # 0.1.16 Export, CustomUserExport, WikiNavigation
 * [Changed] Export: Drag and drop from project folder (tree view) into exportlist
 * [Changed] Export: Design looks now like the atom tree-view
