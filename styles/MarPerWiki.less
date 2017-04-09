@@ -36,7 +36,20 @@ atom-workspace.maximize-preview {
       right: 0;
       left: 0;
       bottom: 0;
-      z-index: 100;
+      z-index: 1000;
+    }
+  }
+}
+atom-workspace.maximize-editor {
+  atom-pane-container {
+    position:relative;
+    atom-pane.mpwEditor  {
+      position:absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 1000;
     }
   }
 }

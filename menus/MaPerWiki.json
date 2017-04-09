@@ -8,7 +8,7 @@
         {"label": "Toggle Export","command": "MaPerWiki:toggleExport"},
         {"label": "Toggle Link checker","command": "MaPerWiki:toggleLinkChecker"},
         {"label": "Check orphaned WikiPages","command": "MaPerWiki:checkOrphanedWikiPages"},
-        {"label": "Toggle maximize preview","command": "MaPerWiki:maximizePreview"},
+        {"label": "Toggle edit/preview","command": "MaPerWiki:maximizePreview"},
         {"label": "TOC",
           "submenu": [
             {"label": "Toggle TOC", "command": "MaPerWiki:toggleToc"},
@@ -32,7 +32,7 @@
       {"label": "Toggle Export","command": "MaPerWiki:toggleExport"},
       {"label": "Toggle Link checker","command": "MaPerWiki:toggleLinkChecker"},
       {"label": "Check orphaned WikiPages","command": "MaPerWiki:checkOrphanedWikiPages"},
-      {"label": "Toggle maximize preview","command": "MaPerWiki:maximizePreview"},
+      {"label": "Toggle edit/preview","command": "MaPerWiki:maximizePreview"},
       {"label": "TOC",
         "submenu": [
           {"label": "Toggle TOC", "command": "MaPerWiki:toggleToc"},

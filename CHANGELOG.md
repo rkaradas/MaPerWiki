@@ -1,3 +1,10 @@
+# 0.1.18 Export & WikiNavigation fix, WikiSearch & Maximize Preview enhancement
+* [fixed] Export: Changed cwd to saveas directory
+* [fixed] WikiNavigation: Detect all md files in all panes
+* [Added] Export: Open save dialog
+* [Added] WikiSearch: Added abort search for long running searches.
+* [Changed] Maximize Preview: Changed maximize preview to toggle between edit&preview, just edit, just preview
+
 # 0.1.17 Export, WikiSearch, Keymaps
 * [Changed] Export: Removed pandoc args
 * [Changed] Export: Temp file generating method

@@ -57,10 +57,13 @@
           </div>
         </div>
         <div class='block'>
-            <label>Save as:</label>
-            <!--
-            -->
-            <small-text-editor :text.sync="model.saveAs" placeholder="Save as..."></small-text-editor>
+          <label>Save as:</label>
+          <!--
+          -->
+          <div class="maperwiki-export-group">
+            <small-text-editor :text.sync="model.saveAs" placeholder="Save as..." class="form-control" style="overflow:hidden;padding: 2px 5px"></small-text-editor>
+            <button class="btn" v-on:click="openSaveDialog" >...</button>
+          </div>
         </div>
       </div>
 

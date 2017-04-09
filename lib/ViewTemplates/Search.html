@@ -50,7 +50,10 @@
         <div class="maperwiki-search-actions-wrapper">
           <div class='maperwiki-search-actions' >
             <button class='btn' v-on:click="search()" :disabled="model.isBusy">Find</button>
-            <button class='btn' v-on:click="searchInWiki()" :disabled="model.isBusy">Find in Wiki</button>
+            <button class='btn' v-on:click="searchInWiki()" v-if="!model.isBusy">Find in Wiki</button>
+            <button v-else v-on:click="abortSearch()" class='btn btn-error' >
+              Abort search
+            </button>
             <div class="btn-group btn-toggle btn-group-options">
 
               <button v-on:click="setIsRegEx()" class='btn' v-bind:class="{ 'selected': model.isRegEx}" :disabled="model.isBusy">
