@@ -226,5 +226,28 @@
       }
 
     }
+  },
+  "WikiPageNavigation":{
+    "title": "WikiPageNavigation section",
+    "description": "Just the WikiPageNavigation section ",
+    "type": "object",
+    "properties": {
+      "showMaxTabs": {
+        "title": "Show maximum wikipagenavigation tabs",
+        "description": "Sets the maximum number of tabs that should stay open when navigating the wiki. Set to 0 to deactive.",
+        "type": "number",
+        "default": 5,
+        "minimum": 0,
+        "order": 1
+      },
+      "saveAndDestroy": {
+        "title": "Save unsaved changes before close.",
+        "description": "This setting depends on 'Show maximum wikipagenavigation tabs'. Saves and closes tabs with unsaved changes (is modified) that should be closed. If set to false, the tabs with unsaved changes, remain open.",
+        "type": "boolean",
+        "default": false,
+        "order": 1
+      }
+
+    }
   }
 }

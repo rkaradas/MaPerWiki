@@ -1,3 +1,8 @@
+# 0.1.19 WikiNavigation changes & disabled console output  
+* [Added] WikiNavigation: Remove deleted entries from history
+* [Added] WikiNavigation: Keep, configurable, nr. of tabs open (with option to autosave changed files)
+* [Changed] Console output: Disabled by default. Can be activated by setting "window.mpwShowOutput = true;" in dev console.
+
 # 0.1.18 Export & WikiNavigation fix, WikiSearch & Maximize Preview enhancement
 * [fixed] Export: Changed cwd to saveas directory
 * [fixed] WikiNavigation: Detect all md files in all panes
