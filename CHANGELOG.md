@@ -1,3 +1,6 @@
+# 0.1.20 Readme update and toc fix  
+* [fixed] TOC: Showing false positive headings, e.g. comments in python code blocks  
+
 # 0.1.19 WikiNavigation changes & disabled console output  
 * [Added] WikiNavigation: Remove deleted entries from history
 * [Added] WikiNavigation: Keep, configurable, nr. of tabs open (with option to autosave changed files)
