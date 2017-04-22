@@ -124,7 +124,7 @@ Shortcut                        | Action
   * Remove added files/folders (drag and drop from export selection into trash icon)
 
 #### Demo
-![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/demo-wikisearch.gif)
+![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/demo-export.gif)
 
 
 ## TOC
