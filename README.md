@@ -10,9 +10,9 @@ Furthermore you have to install the following packages.
 
 # Feature overview
 
-  * [WikiLink checker](https://github.com/rkaradas/MaPerWiki/tree/master/WikiLinkChecker.md)
-  * [WikiSearch](https://github.com/rkaradas/MaPerWiki/tree/master/WikiSearch.md)
-  * [Export (pandoc/calibre-ebook)](https://github.com/rkaradas/MaPerWiki/tree/master/Export.md)
+  * [WikiLink checker](#wikilink-checker)
+  * [WikiSearch](#wikisearch)
+  * [Export (pandoc/calibre-ebook)](#export)
   * [TOC](#toc)
   * [WikiHome](#wikihome)
   * [WikiNavigation](#wikinavigation)
