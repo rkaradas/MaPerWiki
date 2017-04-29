@@ -37,9 +37,10 @@ The WikiLink checker, also tries to find alternative locations, by searching the
 ![](https://github.com/rkaradas/MaPerWiki/raw/master/images/settings-linkchecker.png)
 
 #### Default keyboard shortcuts
-Shortcut                        | Action  
---|--
-<kbd>ctrl-alt-l</kbd>           | Toggle WikiLink checker
+
+|Shortcut| Action|
+|--------|-------|
+|<kbd>ctrl-alt-l</kbd>           | Toggle WikiLink checker|
 
 #### Features
   * Autocheck broken WikiLinks with the given interval
@@ -63,9 +64,10 @@ The representation of the results is also different. The WikiSearch keeps your s
 ![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/settings-wikisearch.png)
 
 #### Default keyboard shortcuts
-Shortcut                        | Action  
---|--
-<kbd>ctrl-alt-s</kbd>           | Toggle WikiSearch
+
+|Shortcut| Action|
+|--------|-------|
+|<kbd>ctrl-alt-s</kbd>           | Toggle WikiSearch|
 
 #### Features
   * Search in current file
@@ -112,9 +114,10 @@ Of course you can ignore %2 and the custom extension, if your command or script 
 **Custom settings, refer to demo**
 
 #### Default keyboard shortcuts
-Shortcut                        | Action  
---|--
-<kbd>ctrl-alt-e</kbd>           | Toggle Export
+
+|Shortcut| Action|
+|--------|-------|
+|<kbd>ctrl-alt-e</kbd>           | Toggle Export|
 
 #### Features
   * Export to predefined targets
@@ -137,10 +140,11 @@ You can navigate to a heading entry by clicking it.
 ![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/settings-toc.png)
 
 #### Default keyboard shortcuts
-Shortcut                        | Action  
---|--
-<kbd>ctrl-alt-h</kbd>           | Toggle toc
-<kbd>ctrl-alt-u</kbd>           | Switch toc to left/right
+
+|Shortcut| Action|
+|--------|-------|
+|<kbd>ctrl-alt-h</kbd>           | Toggle toc|
+|<kbd>ctrl-alt-u</kbd>           | Switch toc to left/right|
 
 #### Features
   * Jump to heading entry
@@ -165,10 +169,11 @@ You can manually change it in the settings of this package, with the defined sho
 ![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/settings-wikihome.png)
 
 #### Default keyboard shortcuts
-Shortcut                        | Action  
---|--
-<kbd>ctrl-shift-alt-home</kbd>  | Go to WikiHome
-<kbd>ctrl-shift-alt-h</kbd>     | Set current file as WikiHome
+
+|Shortcut| Action|
+|--------|-------|
+|<kbd>ctrl-shift-alt-home</kbd>  | Go to WikiHome|
+|<kbd>ctrl-shift-alt-h</kbd>     | Set current file as WikiHome|
 
 #### Features
   * Set a markdown file as WikiHome
@@ -187,11 +192,12 @@ You can manually change it in the settings of this package, with the defined sho
 ![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/settings-wikipagenavigation.png)
 
 #### Default keyboard shortcuts
-Shortcut                        | Action  
---|--
-<kbd>ctrl-shift-alt-home</kbd>  | Go to WikiHome
-<kbd>ctrl-shift-alt-left</kbd>  | Go page back
-<kbd>ctrl-shift-alt-right</kbd> | Go page forward
+
+|Shortcut| Action|
+|--------|-------|
+|<kbd>ctrl-shift-alt-home</kbd>  | Go to WikiHome|
+|<kbd>ctrl-shift-alt-left</kbd>  | Go page back|
+|<kbd>ctrl-shift-alt-right</kbd> | Go page forward|
 
 #### Features
   * Go to WikiHome
@@ -211,9 +217,10 @@ Note: If the tree view gets redrawn, you have to, manually, check again.
 **No settings available**
 
 #### Default keyboard shortcuts
-Shortcut                        | Action  
---|--
-<kbd>ctrl-alt-o</kbd>           | Check orphaned WikiPages
+
+|Shortcut| Action|
+|--------|-------|
+|<kbd>ctrl-alt-o</kbd>           | Check orphaned WikiPages|
 
 #### Features
   * Check orphaned WikiPages
@@ -308,9 +315,9 @@ Feels like a Wiki in combination with WikiNavigation, WikiHome and WikiSearch, b
 **No settings available**
 
 #### Default keyboard shortcuts
-Shortcut                        | Action  
---|--
-<kbd>ctrl-alt-m</kbd>           | Toggle edit/preview
+|Shortcut| Action|
+|--------|-------|
+|<kbd>ctrl-alt-m</kbd>           | Toggle edit/preview|
 
 #### Features
   * Switch between edit, preview and edit&preview mode
