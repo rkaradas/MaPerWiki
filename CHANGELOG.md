@@ -1,3 +1,4 @@
+# 0.1.22 Keymaps, readme and package changes
 * [Changed] Keymaps: Some keymaps changed, because of the different OS's
 * [Updated] Readme: Minor changes
 * [Updated] Package description and keywords: Removed [Experimental] and added keywords
