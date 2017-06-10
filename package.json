@@ -2,8 +2,8 @@
   "name": "MaPerWiki",
   "main": "./lib/Main",
   "version": "0.1.21",
-  "description": "A package to turn the texteditor into a Markdown personal wiki.",
-  "keywords": ["markdown","personal","wiki","personal-wiki","markdown-personal-wiki"],
+  "description": "[EXPERIMENTAL] A package to turn the texteditor into a Markdown personal wiki.",
+  "keywords": [],
   "repository": "https://github.com/rkaradas/MaPerWiki",
   "license": "MIT",
   "engines": {

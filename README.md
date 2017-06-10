@@ -33,16 +33,16 @@ If the broken WikiLink is a markdown file, you can create a new file at the refe
 
 The WikiLink checker, also tries to find alternative locations, by searching the Wiki (project) for matching filenames. It lists the alternative files for each link, so you can decide, which is the correct one and easily link to it. Furthermore you can navigate to each broken WikiLink to manually change it.
 
-### Settings
+#### Settings
 ![](https://github.com/rkaradas/MaPerWiki/raw/master/images/settings-linkchecker.png)
 
-### Default keyboard shortcuts
+#### Default keyboard shortcuts
 
 |Shortcut| Action|
 |--------|-------|
 |<kbd>ctrl-alt-l</kbd>           | Toggle WikiLink checker|
 
-### Features
+#### Features
   * Autocheck broken WikiLinks with the given interval
   * Find alternative links for a broken WikiLink
   * Link to an alternative link
@@ -50,7 +50,7 @@ The WikiLink checker, also tries to find alternative locations, by searching the
   * Create new (md)-file at the the referenced location
   * Statusbar integration
 
-### Demo
+#### Demo
 ![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/demo-linkchecker.gif)
 
 
@@ -60,16 +60,16 @@ The WikiLink checker, also tries to find alternative locations, by searching the
 The WikiSearch is somehow like the built-in search, but only searches in markdown files.
 The representation of the results is also different. The WikiSearch keeps your search results in the panel (search history), so you can keep track of the results. If you want to remove a specific search or the complete results, you can do that too. You can also abort a running search action, if it takes too long.
 
-### Settings
+#### Settings
 ![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/settings-wikisearch.png)
 
-### Default keyboard shortcuts
+#### Default keyboard shortcuts
 
 |Shortcut| Action|
 |--------|-------|
 |<kbd>ctrl-alt-s</kbd>           | Toggle WikiSearch|
 
-### Features
+#### Features
   * Search in current file
   * Search in project
   * Search with regular expression and/or case sensitive and/or whole word
@@ -78,10 +78,10 @@ The representation of the results is also different. The WikiSearch keeps your s
   * Clear all search results
   * Ignore symbolic links
 
-### Demo
+#### Demo
 ![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/demo-wikisearch.gif)
 
-## Export Wiki
+## Export
 
 ### Description
 The export function requires pandoc and calibre-ebook, so make sure you install the applications and add their binary pathes to your PATH variable.
@@ -110,43 +110,43 @@ If you need to set your own export commands, e.g. you use a latex preprocessor, 
 
 Of course you can ignore %2 and the custom extension, if your command or script handles the export.
 
-### Settings
+#### Settings
 **Custom settings, refer to demo**
 
-### Default keyboard shortcuts
+#### Default keyboard shortcuts
 
 |Shortcut| Action|
 |--------|-------|
 |<kbd>ctrl-alt-e</kbd>           | Toggle Export|
 
-### Features
+#### Features
   * Export to predefined targets
   * Add custom export targets
   * Select files/folders to export (drag and drop from atom tree-view into export selection)
   * Reorder files/folders within export selection
   * Remove added files/folders (drag and drop from export selection into trash icon)
 
-### Demo
+#### Demo
 ![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/demo-export.gif)
 
 
-## Table of contents
+## TOC
 
 ### Description
 The table of contents feature displays a toc panel for the current markdown file, so you have an overview of the headings of your markdown file. The toc supports setext as well as atx style (refer to: [markdown syntax](https://daringfireball.net/projects/markdown/syntax#header)).
 You can navigate to a heading entry by clicking it.
 
-### Settings
+#### Settings
 ![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/settings-toc.png)
 
-### Default keyboard shortcuts
+#### Default keyboard shortcuts
 
 |Shortcut| Action|
 |--------|-------|
-|<kbd>ctrl-alt-shift-t</kbd>     | Toggle toc|
+|<kbd>ctrl-alt-h</kbd>           | Toggle toc|
 |<kbd>ctrl-alt-u</kbd>           | Switch toc to left/right|
 
-### Features
+#### Features
   * Jump to heading entry
   * Toggle toc
   * Switch toc to right or left
@@ -155,7 +155,7 @@ You can navigate to a heading entry by clicking it.
   * Refresh toc
   * Automatically number headings
 
-### Demo
+#### Demo
 ![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/demo-toc.gif)
 
 
@@ -165,21 +165,21 @@ You can navigate to a heading entry by clicking it.
 The WikiHome is designed to specify a markdown file as WikiHome, so have an entry point to your wiki.
 You can manually change it in the settings of this package, with the defined shortcut or in the context menu of the atom text editor. If the file doesn't exist, it will be created.
 
-### Settings
+#### Settings
 ![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/settings-wikihome.png)
 
-### Default keyboard shortcuts
+#### Default keyboard shortcuts
 
 |Shortcut| Action|
 |--------|-------|
-|<kbd>ctrl-alt-cmd-up</kbd>     | Go to WikiHome|
-|<kbd>ctrl-alt-cmd-h</kbd>      | Set current file as WikiHome|
+|<kbd>ctrl-shift-alt-home</kbd>  | Go to WikiHome|
+|<kbd>ctrl-shift-alt-h</kbd>     | Set current file as WikiHome|
 
-### Features
+#### Features
   * Set a markdown file as WikiHome
   * Go to WikiHome
 
-### Demo
+#### Demo
 ![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/demo-wikihome.gif)
 
 ## WikiNavigation
@@ -188,45 +188,45 @@ You can manually change it in the settings of this package, with the defined sho
 The WikiHome is designed to specify a markdown file as WikiHome, so you have an entry point to your wiki.
 You can manually change it in the settings of this package, with the defined shortcut or in the context menu of the atom text editor. If the file doesn't exist, it will be created.
 
-### Settings
+#### Settings
 ![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/settings-wikipagenavigation.png)
 
-### Default keyboard shortcuts
+#### Default keyboard shortcuts
 
 |Shortcut| Action|
 |--------|-------|
-|<kbd>ctrl-alt-cmd-up</kbd>     | Go to WikiHome|
-|<kbd>ctrl-alt-cmd-left</kbd>   | Go page back|
-|<kbd>ctrl-alt-cmd-right</kbd>  | Go page forward|
+|<kbd>ctrl-shift-alt-home</kbd>  | Go to WikiHome|
+|<kbd>ctrl-shift-alt-left</kbd>  | Go page back|
+|<kbd>ctrl-shift-alt-right</kbd> | Go page forward|
 
-### Features
+#### Features
   * Go to WikiHome
   * Go page back
   * Go page forward
 
-### Demo
+#### Demo
 ![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/demo-wikipagenavigation.gif)
 
 ## Orphaned WikiPages checker
 
 ### Description
 The orphaned WikiPages checker, checks for WikiPages (markdown files), which are not referenced (not linked) in the whole Wiki project folder and mark them (red foreground color) in the atom tree view.
-**Note**: If the tree view gets redrawn, you have to, manually, check again. This happens if you collapse and expand a folder. If you need to check for orphaned WikiPages in a specific folder, you also have to expand that folder.
+Note: If the tree view gets redrawn, you have to, manually, check again.
 
-### Settings
+#### Settings
 **No settings available**
 
-### Default keyboard shortcuts
+#### Default keyboard shortcuts
 
 |Shortcut| Action|
 |--------|-------|
 |<kbd>ctrl-alt-o</kbd>           | Check orphaned WikiPages|
 
-### Features
+#### Features
   * Check orphaned WikiPages
   * Mark orphaned WikiPages in atom tree-view
 
-### Demo
+#### Demo
 ![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/demo-orphanedwikipageschecker.gif)
 
 ## Wordcount
@@ -234,13 +234,13 @@ The orphaned WikiPages checker, checks for WikiPages (markdown files), which are
 ### Description
 The wordcount feature, counts words, characters, rows, etc. Please refer to wordcount features section for all properties.  
 
-### Settings
+#### Settings
 ![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/settings-wordcount.png)
 
-### Default keyboard shortcuts
+#### Default keyboard shortcuts
 **No shortcuts available**
 
-### Features
+#### Features
   * Count number of words
   * Count number of characters
   * Count number of characters without whitespace
@@ -251,7 +251,7 @@ The wordcount feature, counts words, characters, rows, etc. Please refer to word
   * Show goal in percentage (if goal set)
   * Show goal as progress (statusbar)
 
-### Demo
+#### Demo
 ![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/demo-wordcount.gif)
 
 ## Autosave
@@ -260,17 +260,17 @@ The wordcount feature, counts words, characters, rows, etc. Please refer to word
 The autosave function has no visual user interface, but you can change the behavior in the autosave settings section of this package.
 If the autosave function is enabled, it will automatically save all open markdown documents in the given interval.
 
-### Settings
+#### Settings
 ![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/settings-autosave.png)
 
-### Default keyboard shortcuts
+#### Default keyboard shortcuts
 **No shortcuts available**
 
-### Features
+#### Features
   * Enable/Disable autosave
   * Set autosave interval
 
-### Demo
+#### Demo
 **No demo available**
 
 ## Drag and Drop
@@ -281,19 +281,19 @@ The drag and drop feature has the following behavior.
   * If there is a selected text and you drop a project file (md or image file) into the text editor, it will replace the selection with a markdown link
   * If there is no selection, it will fallback to the current settings. That means that it will either "copy the link into the clipboard" or "paste it to the last cursor position".
 
-### Settings
+#### Settings
 ![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/settings-dragndrop.png)
 
-### Default keyboard shortcuts
+#### Default keyboard shortcuts
 **No shortcuts available**
 
-### Features
+#### Features
   * Enable/disable drag and drop
   * Replace selection with a markdown link (dropped md or image file)
   * Copy markdown link to clipboard
   * Paste markdown link to last cursor position
 
-### Demo
+#### Demo
 ![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/demo-dragndrop.gif)
 
 ## Toggle edit and preview
@@ -311,16 +311,16 @@ Feels like a Wiki in combination with WikiNavigation, WikiHome and WikiSearch, b
   * Switch back to edit mode
 
 
-### Settings
+#### Settings
 **No settings available**
 
-### Default keyboard shortcuts
+#### Default keyboard shortcuts
 |Shortcut| Action|
 |--------|-------|
 |<kbd>ctrl-alt-m</kbd>           | Toggle edit/preview|
 
-### Features
+#### Features
   * Switch between edit, preview and edit&preview mode
 
-### Demo
+#### Demo
 ![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/demo-toggleeditpreview.gif)
