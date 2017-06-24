@@ -1,3 +1,6 @@
+# 0.1.23 Toggle edit&preview fixed
+* [fixed] Toggle edit&preview: Fixed "not switching to just preview mode"
+
 # 0.1.22 Keymaps, readme and package changes
 * [Changed] Keymaps: Some keymaps changed, because of the different OS's
 * [Updated] Readme: Minor changes
@@ -5,7 +8,7 @@
 
 # 0.1.21 LinkChecker fix and readme update
 * [fixed] LinkChecker: fixed issue [#2](https://github.com/rkaradas/MaPerWiki/issues/2)
-* [updated] Readme: Tables not showing correctly 
+* [updated] Readme: Tables not showing correctly
 
 # 0.1.20 Readme update and toc fix  
 * [fixed] TOC: Showing false positive headings, e.g. comments in python code blocks  
