@@ -1,7 +1,7 @@
 {
   "name": "MaPerWiki",
   "main": "./lib/Main",
-  "version": "0.1.23",
+  "version": "0.1.24",
   "description": "A package to turn the texteditor into a Markdown personal wiki.",
   "keywords": [
     "markdown",
