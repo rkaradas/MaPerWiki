@@ -21,6 +21,8 @@ Furthermore you have to install the following packages.
   * [Autosave](#autosave)
   * [Drag and Drop](#drag-and-drop)
   * [Toggle edit/preview](#toggle-edit-and-preview)
+  * [Jump to WikiLink](#jump-to-wikilink)
+  * [Autocomplete WikiLink](#autocomplete-wikilink)
 
 
 ## WikiLink checker
@@ -324,3 +326,44 @@ Feels like a Wiki in combination with WikiNavigation, WikiHome and WikiSearch, b
 
 ### Demo
 ![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/demo-toggleeditpreview.gif)
+
+## Jump to WikiLink
+
+### Description
+This feature opens the WikiLink und the cursor position.
+It opens Markdown files within Atom and if the option (see below), is set to true, it tries to open non markdown files in the desktop's default manner.
+
+
+### Settings
+![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/settings-jumptowikilink.png)
+
+### Default keyboard shortcuts
+|Shortcut| Action|
+|--------|-------|
+|<kbd>ctrl-alt-cmd-j</kbd>           | JumpToWikiLink |
+
+### Features
+  * Jump to WikiLink under cursor position
+  * Open non markdown files in desktop's default manner
+
+### Demo
+**No demo available**
+
+## Autocomplete WikiLink
+
+### Description
+This feature provides autocomplete functionality for WikiLinks (see demo).
+It returns a suggestion list of markdown filepaths within the current project.
+The filepaths are relative to the currently editing file.
+
+### Settings
+**No settings available**
+
+### Default keyboard shortcuts
+**No shortcuts available**
+
+### Features
+  * Autocomplete WikiLinks with markdown filepathes within the project
+
+### Demo
+![](https://raw.githubusercontent.com/rkaradas/MaPerWiki/master/images/demo-autocompletewikilink1.gif)

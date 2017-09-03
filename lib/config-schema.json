@@ -249,5 +249,20 @@
       }
 
     }
+  },
+  "JumpToWikiLink":{
+    "title": "Jump to WikiLink section",
+    "description": "Just the JumpToWikiLink section ",
+    "type": "object",
+    "properties": {
+      "openNonMarkdownFilesInSystemsDefaultApp": {
+        "title": "Try to open non markdown files in the desktop’s default manner.",
+        "description": "If set to true, tries to open non markdown files in the desktop’s default manner.",
+        "type": "boolean",
+        "default": false,
+        "order": 1
+      }
+
+    }
   }
 }

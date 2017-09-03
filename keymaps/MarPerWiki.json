@@ -10,6 +10,7 @@
     "ctrl-alt-cmd-left": "MaPerWiki:goBack",
     "ctrl-alt-cmd-right": "MaPerWiki:goForward",
     "ctrl-alt-cmd-up": "MaPerWiki:goToWikiHome",
-    "ctrl-alt-cmd-h": "MaPerWiki:setAsWikiHome"
+    "ctrl-alt-cmd-h": "MaPerWiki:setAsWikiHome",
+    "ctrl-alt-cmd-j": "MaPerWiki:jumpToWikiLink"
   }
 }
