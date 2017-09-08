@@ -1,3 +1,8 @@
+# 0.1.25 Bugfixes
+* [fixed] Toggle edit&preview: Fixed "not switching to just preview mode"
+* [fixed] OrphanedWikiPages: Fixed not highlighting orphaned files in tree-view
+* [fixed] JumpToWikiLink: Not opening Markdown links correctly    
+
 # 0.1.24 JumpToWikiLink & AutocompleteWikiLink
 * [Added] JumpToWikiLink: Opens the markdown file under the cursor within a markdown link by pressing the corresponding keys or command (MaPerWiki:jumpToWikiLink) [#5](https://github.com/rkaradas/MaPerWiki/issues/5)
 * [Added] AutocompleteWikiLink: Provides suggestions (markdown project files) within a markdown link [#6](https://github.com/rkaradas/MaPerWiki/issues/6)

@@ -12,8 +12,8 @@ Furthermore you have to install the following packages.
 
   * [WikiLink checker](#wikilink-checker)
   * [WikiSearch](#wikisearch)
-  * [Export (pandoc/calibre-ebook)](#export)
-  * [TOC](#toc)
+  * [Export (pandoc/calibre-ebook)](#export-wiki)
+  * [TOC](#table-of-contents)
   * [WikiHome](#wikihome)
   * [WikiNavigation](#wikinavigation)
   * [Orphaned WikiPages checker](#orphaned-wikipages-checker)
