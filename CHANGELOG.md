@@ -1,3 +1,12 @@
+# 0.1.26 AutocompleteWikiLink & JumpToWikiLink
+* [Changed] Since I use new Atom api functions, you need Atom version >=1.18.0
+* [Added] AutocompleteWikiLink: Configurable case sensitive match.
+* [Added] AutocompleteWikiLink: Include all project files. If set to tru, includes all project files (not just markdown files).
+* [Changed] JumpToWikiLink: Now you can also open links if the cursor is above the title are of the link.     
+* [Changed] JumpToWikiLink: Now you can open web urls, if the option "open non markdown files" is set to true and the link under the cursor is a web url.
+* [Added] Added a helper class "utils" for recurring tasks
+* [Added] Support for WikiText link syntax for AutocompleteWikiLink and JumpToWikiLink functions.
+
 # 0.1.25 Bugfixes
 * [fixed] Toggle edit&preview: Fixed "not switching to just preview mode"
 * [fixed] OrphanedWikiPages: Fixed not highlighting orphaned files in tree-view

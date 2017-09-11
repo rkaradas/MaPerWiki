@@ -264,5 +264,27 @@
       }
 
     }
+  },
+  "AutocompleteWikiLink":{
+    "title": "Autocomplete WikiLink section",
+    "description": "Just the Autocomplete section ",
+    "type": "object",
+    "properties": {
+      "autocompleteAllProjectFiles": {
+        "title": "Autocomplete all project files",
+        "description": "If set to true, the suggestion list shows all project files.",
+        "type": "boolean",
+        "default": false,
+        "order": 1
+      },
+      "caseSensitive": {
+        "title": "Match case sensitive",
+        "description": "If set to true, matches case sensitive.",
+        "type": "boolean",
+        "default": true,
+        "order": 2
+      }
+
+    }
   }
 }
