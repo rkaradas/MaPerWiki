@@ -1,4 +1,4 @@
-# 0.1.26 AutocompleteWikiLink & JumpToWikiLink
+# 0.1.27 AutocompleteWikiLink & JumpToWikiLink
 * [fixed] AutocompleteWikiLink: Replacement string not replacing dots
 * [fixed] JumpToWikiLink: MacOS not opening weburls
 * [Added] JumpToWikiLink: Configurable (alt, ctrl, cmd or shift) key + click to open WikiLink
