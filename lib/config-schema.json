@@ -261,6 +261,22 @@
         "type": "boolean",
         "default": false,
         "order": 1
+      },
+      "clickToOpenWikiLink": {
+        "title": "Open WikiLink with configured keyevent + click",
+        "description": "Triggers jump to WikiLink by pressing the configured keyevent + click.",
+        "type": "boolean",
+        "default": false,
+        "order": 2
+      },
+      "clickToOpenWikiLinkWithKeyevent": {
+        "title": "Keyevent to open WikiLink with keyevent + click",
+        "description": "Sets the keyevent to triggers jump to WikiLink by pressing keyevent + click.",
+        "type": "string",
+        "default": "alt",
+        "items": {"type": "string"},
+        "enum": ["alt", "ctrl", "cmd", "shift"],
+        "order": 3
       }
 
     }

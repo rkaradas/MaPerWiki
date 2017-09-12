@@ -1,4 +1,9 @@
 # 0.1.26 AutocompleteWikiLink & JumpToWikiLink
+* [fixed] AutocompleteWikiLink: Replacement string not replacing dots
+* [fixed] JumpToWikiLink: MacOS not opening weburls
+* [Added] JumpToWikiLink: Configurable (alt, ctrl, cmd or shift) key + click to open WikiLink
+
+# 0.1.26 AutocompleteWikiLink & JumpToWikiLink
 * [Changed] Since I use new Atom api functions, you need Atom version >=1.18.0
 * [Added] AutocompleteWikiLink: Configurable case sensitive match.
 * [Added] AutocompleteWikiLink: Include all project files. If set to tru, includes all project files (not just markdown files).
